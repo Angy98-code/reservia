@@ -2,9 +2,11 @@
 <html>
 	<head>
 	<meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="second.css"/>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-     <title>reservia</title>
+  <!----ajouter un autre css pour autre résolution-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+     <title>reservia 1280px</title>
     <script src="https://kit.fontawesome.com/941542f664.js" crossorigin="anonymous"></script>
   	</head>
 	
@@ -15,22 +17,15 @@
   <p><img src="Reservia.svg" alt="reservia" id="logo"/></p>
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature </p>   
-
-impossible a wraper ! en trois pieces
+<!--a revoir-->
 <form action="traitement.php">
             <div class="imputcontainer">
             <span class="inputicon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
               <input type="icon" name="iconinfo"/>
-            <label for="search"></label><span class="inputmars"></span><input type="text" id="search" name="marseille" value="Marseille, France"/>
+            <label for="search"></label><span class="inputmars"></span><input type="text" id="search" name="marseille" value="Marseille, France" onclick="marseille.value='';"/>
             <span class="inputrecherche"></span><input type="bouton" name="search" value="Rechercher"/>
              </div> <br/>           
 </form>
-
-
-
-
-
-
 
 <div class="searchFilters">
 <h2 class="searchFiltersTitle">Filtres</h2>
@@ -40,7 +35,7 @@ impossible a wraper ! en trois pieces
     <i class="fas fa-money-bill-wave searchFiltersFilterWrapiconIcon" aria-hidden="true">
     </i> 
 </div>
-<span class="searchFiltersFilterTitle">Economique</span>
+<span class="searchFiltersFilterTitle">Économique</span>
 </div>
 
 <div class="searchFiltersFilter">
@@ -66,27 +61,7 @@ impossible a wraper ! en trois pieces
 </div>
 <span class="searchFiltersFilterTitle">Animaux autorisés</span>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 <!----- trop complqué --
 <form>
 <div class="lignecontainer"><span class="filtres">Filtres</span>
@@ -104,20 +79,36 @@ impossible a wraper ! en trois pieces
  
 </div>							
 </form>
---->
+---
+<form class="searchForm" action="proceedForm.html" method="GET">
+  <span class="searchFormWrapicon">
+    <i class="fas fa-map-marker-alt searchFormWrapiconIcon" aria-hidden="true"></i>
+  </span>
+  <input class="searchFormSearchinput" type="search" placeholder="Marseille, France" size="1">
+  <button class="searchFormSubmitinput">
+    <span class="searchFormSubmitinputText">Rechercher</span>
+    <i class="searchFormSubmitinputIcon fas fa-search" aria-hidden="true"></i>
+  </button>
+</form>-->
+
+
+
+
+
+
 <div class="ligneiconinfo">
 <div class="resultaticon">
   <i class="fas fa-info resultaticonIcon" aria hidden="true"></i></div>
   <p class="resultatText">Plus de 500 logements sont disponibles dans cette ville</p>
 </div>
-
+</div>
    
 <div class="entetegauche">
-        <ul>
-            <li>Hébergements</li>
-            <li>Activités</li>
-            <li>s'inscrire</li>
-        </ul>
+      
+            <a href="#" class="heb">Hébergements</a>
+            <a href="#" class="act">Activités</a>
+            <a href="#" class="ins">s'inscrire</a>
+      
 </div>
 </header>
 
@@ -125,7 +116,7 @@ impossible a wraper ! en trois pieces
 <article>
 <H1>Hébergements à Marseille</H1> 
 <figure class="cannebiere"><img src="images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="cannebière"/>
-    <figcaption><H2>Auberge la Cannebière</H2>Nuit à partir de <strong>25</strong></br>
+    <figcaption><H2>Auberge la Cannebière</H2>Nuit à partir de <strong>25€</strong></br>
          <span class="note">
         <div class="notewrap">
             <span class="starsactive" style="width:100%">
@@ -140,7 +131,7 @@ impossible a wraper ! en trois pieces
     </figcaption>    
 </figure>  
 <figure class="port"><img src="images/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="port"/>
-    <figcaption><H2>Hôtel du port</H2>Nuit à partir de <strong>52</strong></br>
+    <figcaption><H2>Hôtel du port</H2>Nuit à partir de <strong>52€</strong></br>
     <i aria-hidden="true" class="fas fa-star active"></i>   
     <i aria-hidden="true" class="fas fa-star active"></i> 
     <i aria-hidden="true" class="fas fa-star active"></i> 
@@ -149,7 +140,7 @@ impossible a wraper ! en trois pieces
     </figcaption>    
 </figure> 
 <figure class="mouettes"><img src="images/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="mouettes"/>
-        <figcaption><H2>Hôtel Les mouettes</H2>Nuit à partir de <strong>76</strong></br>
+        <figcaption><H2>Hôtel Les mouettes</H2>Nuit à partir de <strong>76€</strong></br>
         <i aria-hidden="true" class="fas fa-star active"></i>   
         <i aria-hidden="true" class="fas fa-star active"></i> 
         <i aria-hidden="true" class="fas fa-star active"></i> 
@@ -158,7 +149,7 @@ impossible a wraper ! en trois pieces
         </figcaption>    
         </figure> 
 <figure class="mer"><img src="./images/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="mer"/>
-            <figcaption><H2>hôtel de la mer</H2>Nuit à partir de <strong>46</strong></br>
+            <figcaption><H2>hôtel de la mer</H2>Nuit à partir de <strong>46€</strong></br>
             <i aria-hidden="true" class="fas fa-star active"></i>   
             <i aria-hidden="true" class="fas fa-star active"></i> 
             <i aria-hidden="true" class="fas fa-star active"></i> 
@@ -167,7 +158,7 @@ impossible a wraper ! en trois pieces
             </figcaption>    
 </figure> 
 <figure class="panier"><img src="images/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="panier"/>
-                <figcaption><H2>Auberge Le Panier</H2>Nuit à partir de <strong>23</strong></br>
+                <figcaption><H2>Auberge Le Panier</H2>Nuit à partir de <strong>23€</strong></br>
                 <i aria-hidden="true" class="fas fa-star active"></i>   
                 <i aria-hidden="true" class="fas fa-star active"></i> 
                 <i aria-hidden="true" class="fas fa-star active"></i> 
@@ -176,7 +167,7 @@ impossible a wraper ! en trois pieces
                 </figcaption>    
 </figure> 
 <figure class="amina"><img src="images/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="amina"/>
-                    <figcaption><H2>Hôtel chez Amina</H2>Nuit à partir de <strong>96</strong></br>
+                    <figcaption><H2>Hôtel chez Amina</H2>Nuit à partir de <strong>96€</strong></br>
                     <i aria-hidden="true" class="fas fa-star active"></i>   
                     <i aria-hidden="true" class="fas fa-star active"></i> 
                     <i aria-hidden="true" class="fas fa-star active"></i> 
@@ -190,7 +181,7 @@ impossible a wraper ! en trois pieces
 <aside>
 <H1>Les plus populaire<i class="fas fa-chart-line"></i></H1>     
 <figure class="matin"><img src="images/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="matin"/>
-    <figcaption><H2>Hôtel Le soleil du matin</H2>Nuit à partir de <strong>128</strong></br>
+    <figcaption><H2>Hôtel Le soleil du matin</H2>Nuit à partir de <strong>128€</strong></br>
     <i aria-hidden="true" class="fas fa-star active"></i>   
     <i aria-hidden="true" class="fas fa-star active"></i> 
     <i aria-hidden="true" class="fas fa-star active"></i> 
@@ -199,7 +190,7 @@ impossible a wraper ! en trois pieces
     </figcaption>    
 </figure> 
 <figure class="eau"><img src="images/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="eau"/>
-    <figcaption><H2>Au coeur de l'eau Chambres d'hôtes<br/></H2>Nuit à partir de <strong>71</strong></br>
+    <figcaption><H2>Au coeur de l'eau Chambres d'hôtes<br/></H2>Nuit à partir de <strong>71€</strong></br>
     <i aria-hidden="true" class="fas fa-star active"></i>   
     <i aria-hidden="true" class="fas fa-star active"></i> 
     <i aria-hidden="true" class="fas fa-star active"></i> 
@@ -208,7 +199,7 @@ impossible a wraper ! en trois pieces
     </figcaption>    
 </figure> 
 <figure class="bleublanc"><img src="images/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="bleublanc"/>
-    <figcaption><H2>Hôtel Tout bleu et blanc</H2>Nuit à partir de <strong>68</strong></br>
+    <figcaption><H2>Hôtel Tout bleu et blanc</H2>Nuit à partir de <strong>68€</strong></br>
     <i aria-hidden="true" class="fas fa-star active"></i>   
     <i aria-hidden="true" class="fas fa-star active"></i> 
     <i aria-hidden="true" class="fas fa-star active"></i> 
@@ -225,27 +216,25 @@ impossible a wraper ! en trois pieces
 <footer>
 <div class="apropos">
     <H2>A propos</H2>
-        <ul>
-        <li>Fonctionnement du site</li>
-        <li>Conditions générales de vente</li>
-        <li>Données et confidentialité</li>
-        </ul> 
+        
+        <a href="#" class="tabfooter">Fonctionnement du site</a>
+        <a href="#" class="tabfooter">Conditions générales de vente</a>
+        <a href="#" class="tabfooter">Données et confidentialité</a>  
 </div>  
 
 <div class="noshebergements">
     <H2>Nos hébergements</H2>
-        <ul>
-        <li>Charte qualité</li>
-        <li>Soumettre votre hôtel</li>
-        </ul>    
+        
+         <a href="#" class="tabfooter">Charte qualité</a>
+            <a href="#" class="tabfooter">Soumettre votre hôtel</a>
+           
 </div>
 
 <div class="assistance">
     <H2>Assistance</H2>
-        <ul>
-        <li>Centre d'aide</li>
-        <li>Nous contacter</li>    
-        </ul>
+        
+          <a href="#" class="tabfooter">Centre d'aide</a>
+            <a href="#" class="tabfooter">Nous contacter</a>    
 </div>
 
 </footer>
@@ -369,4 +358,23 @@ impossible a wraper ! en trois pieces
     
     
     
--->    
+-->   
+
+<!----- trop complqué --
+<form>
+<div class="lignecontainer"><span class="filtres">Filtres</span>
+  <span class="input"><input type="rond" name="pseudo" value=""/><i class="fas fa-money-bill-wave" aria-hidden="true"></i></span>
+    <input type="button" name="pseudo" value="Economique"/> 
+
+    <span class="input"><input type="rond" name="pseudo" value=""/><i class="fas fa-child" aria-hidden="true"></i></span>
+            <input type="button" name="pseudo" value="Familial"/>
+
+   <span class="input"><input type="rond" name="pseudo" value=""/><i class="fas fa-heart" aria-hidden="true"></i></span>    
+            <input type="button" name="pseudo" value="Romantique"/>  
+            
+    <span class="input"><input type="rond" name="pseudo" value=""/><i class="fas fa-dog" aria-hidden="true"></i></span>
+            <input type="button" name="pseudo" value="Animaux autorisés"/>           
+ 
+</div>							
+</form>
+--->
