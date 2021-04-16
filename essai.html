@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="essai.css"/>
+  <!----ajouter un autre css pour autre résolution-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+     <title>reservia 1280px</title>
+    <script src="https://kit.fontawesome.com/941542f664.js" crossorigin="anonymous"></script>
+  	</head>
+	
+      <body>
+<div class="blocpage">
+<header>
+<div class=entetegauche>
+  <p><img src="Reservia.svg" alt="reservia" id="logo"/></p>
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature </p>   
+
+<!--faire au plus simple 1 div qui englobe(à cause du rechercher) + 1 div principale, 1div pour div icon, 1 input et 1 bouton
+résultat même taille-  finition nickel colle sans déborder!-->
+<div class="englobe">
+  <div class="containerrecherche">
+    <div class="containermars">
+    <div class="infoinconn"><i class="fas fa-map-marker-alt iif" aria-hidden="true"></i></div></div>
+
+   <input class="inputmarss" type="search" name="nomdelaville" value="Marseille, France" onclick="this.value='';"/>
+</div>
+<div> <!--obligé de faire une div à part car si button est dans le container il reste plus petit puisque
+pas de border et même en augmentant c'est le container qui grandit et button toujours plus petit-->
+  <button class="buttoninfo">Rechercher</button>  
+   </div>
+</div>
+<br/>
+<!--ok compris maintenant /merci à Benjamin :)-->
+<div class="containerdesfiltres">
+<h3 class="titrefiltre">Filtres</h3>
+
+<div class="filtrecontainer">
+  <div class="filtreicon">
+    <i class="fas fa-money-bill-wave iicon" aria-hidden="true">
+    </i> 
+</div>
+<span class="filtrelabel">Économique</span>
+</div>
+
+<div class="filtrecontainer">
+  <div class="filtreicon">
+    <i class="fas fa-child iicon" aria-hidden="true">
+    </i> 
+</div>
+<span class="filtrelabel">Familial</span>
+</div>
+
+<div class="filtrecontainer">
+  <div class="filtreicon">
+    <i class="fas fa-heart iicon" aria-hidden="true">
+    </i> 
+</div>
+<span class="filtrelabel">Romantique</span>
+</div>
+
+<div class="filtrecontainer">
+  <div class="filtreicon">
+    <i class="fas fa-dog iicon" aria-hidden="true">
+    </i> 
+</div>
+<span class="filtrelabel">Animaux autorisés</span>
+</div>
+</div>
+<br/>
+<!-- refait ok -->
+<div class="texteinfo">
+<div class="containerinfo"><i class="fas fa-info iconinfo" aria hidden="true"></i></div>
+  <span class="infoinfo"> Plus de 500 logements sont disponibles dans cette ville</span>
+</div>
+</div> <!--fin entetegauche ?-->
+<div class="entetedroite">
+      
+            <a href="#" class="heb">Hébergements</a>
+            <a href="#" class="act">Activités</a>
+            <a href="#" class="ins">s'inscrire</a>
+      
+</div>
+</header>
+
+<section>
+<article>
+<H1>Hébergements à Marseille</H1> 
+<figure class="cannebiere"><img src="images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="cannebière"/>
+    <figcaption><H2>Auberge la Cannebière</H2>Nuit à partir de <strong>25€</strong></br>
+         <span class="note">
+        <div class="notewrap">
+            <span class="starsactive" style="width:100%">
+              <i aria-hidden="true" class="fas fa-star active"></i>   
+              <i aria-hidden="true" class="fas fa-star active"></i> 
+              <i aria-hidden="true" class="fas fa-star active"></i> 
+              <i aria-hidden="true" class="fas fa-star active"></i> 
+              <i aria-hidden="true" class="fas fa-star inactive"></i>
+            </span>
+
+            </div>
+    </figcaption>    
+</figure>  
+<figure class="port"><img src="images/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="port"/>
+    <figcaption><H2>Hôtel du port</H2>Nuit à partir de <strong>52€</strong></br>
+    <i aria-hidden="true" class="fas fa-star active"></i>   
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    </figcaption>    
+</figure> 
+<figure class="mouettes"><img src="images/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="mouettes"/>
+        <figcaption><H2>Hôtel Les mouettes</H2>Nuit à partir de <strong>76€</strong></br>
+        <i aria-hidden="true" class="fas fa-star active"></i>   
+        <i aria-hidden="true" class="fas fa-star active"></i> 
+        <i aria-hidden="true" class="fas fa-star active"></i> 
+        <i aria-hidden="true" class="fas fa-star active"></i> 
+        <i aria-hidden="true" class="fas fa-star inactive"></i> 
+        </figcaption>    
+        </figure> 
+<figure class="mer"><img src="./images/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="mer"/>
+            <figcaption><H2>hôtel de la mer</H2>Nuit à partir de <strong>46€</strong></br>
+            <i aria-hidden="true" class="fas fa-star active"></i>   
+            <i aria-hidden="true" class="fas fa-star active"></i> 
+            <i aria-hidden="true" class="fas fa-star active"></i> 
+            <i aria-hidden="false" class="fas fa-star inactive"></i> 
+            <i aria-hidden="false" class="fas fa-star inactive"></i> 
+            </figcaption>    
+</figure> 
+<figure class="panier"><img src="images/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="panier"/>
+                <figcaption><H2>Auberge Le Panier</H2>Nuit à partir de <strong>23€</strong></br>
+                <i aria-hidden="true" class="fas fa-star active"></i>   
+                <i aria-hidden="true" class="fas fa-star active"></i> 
+                <i aria-hidden="true" class="fas fa-star active"></i> 
+                <i aria-hidden="true" class="fas fa-star active"></i> 
+                <i aria-hidden="true" class="fas fa-star inactive"></i> 
+                </figcaption>    
+</figure> 
+<figure class="amina"><img src="images/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="amina"/>
+                    <figcaption><H2>Hôtel chez Amina</H2>Nuit à partir de <strong>96€</strong></br>
+                    <i aria-hidden="true" class="fas fa-star active"></i>   
+                    <i aria-hidden="true" class="fas fa-star active"></i> 
+                    <i aria-hidden="true" class="fas fa-star active"></i> 
+                    <i aria-hidden="true" class="fas fa-star active"></i> 
+                    <i aria-hidden="true" class="fas fa-star inactive"></i> 
+                    </figcaption>    
+</figure> 
+<p>Afficher plus</p> 
+</article>
+
+<aside>
+<H1>Les plus populaire<i class="fas fa-chart-line"></i></H1>     
+<figure class="matin"><img src="images/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="matin"/>
+    <figcaption><H2>Hôtel Le soleil du matin</H2>Nuit à partir de <strong>128€</strong></br>
+    <i aria-hidden="true" class="fas fa-star active"></i>   
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star inactive"></i> 
+    </figcaption>    
+</figure> 
+<figure class="eau"><img src="images/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="eau"/>
+    <figcaption><H2>Au coeur de l'eau Chambres d'hôtes<br/></H2>Nuit à partir de <strong>71€</strong></br>
+    <i aria-hidden="true" class="fas fa-star active"></i>   
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star inactive"></i> 
+    </figcaption>    
+</figure> 
+<figure class="bleublanc"><img src="images/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="bleublanc"/>
+    <figcaption><H2>Hôtel Tout bleu et blanc</H2>Nuit à partir de <strong>68€</strong></br>
+    <i aria-hidden="true" class="fas fa-star active"></i>   
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star active"></i> 
+    <i aria-hidden="true" class="fas fa-star inactive"></i> 
+    </figcaption>    
+</figure> 
+</aside>
+
+<nav>
+<H1>Activités à Marseille</H1>
+</nav>
+</section>
+<footer>
+<div class="apropos">
+    <H3>A propos</H3>
+        
+        <a href="#" class="tabfooter">Fonctionnement du site</a>
+        <a href="#" class="tabfooter">Conditions générales de vente</a>
+        <a href="#" class="tabfooter">Données et confidentialité</a>  
+</div>  
+
+<div class="noshebergements">
+    <H3>Nos hébergements</H3>
+        
+         <a href="#" class="tabfooter">Charte qualité</a>
+            <a href="#" class="tabfooter">Soumettre votre hôtel</a>
+           
+</div>
+
+<div class="assistance">
+    <H3>Assistance</H3>
+        
+          <a href="#" class="tabfooter">Centre d'aide</a>
+            <a href="#" class="tabfooter">Nous contacter</a>    
+</div>
+
+</footer>
+
+</div>
+</body>
+
+<!---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main>
+
+<section>
+    <form action="traitement.php">
+    <div class="testcontainer">
+               <span class="testicon">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                    <input type="text" name="Marseille" id="marseille" value="Marseille, France" size="30" maxlength="20"/>
+    </div>
+</form>                
+                
+        </div>
+    
+
+
+    <div class="input-icone">
+        <input type="email" placeholder="Courriel">
+        <i class="fa fa-envelope-open fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+
+<form method="post" action="traitement.php">    
+    
+    <div class="testo">
+    <p>
+        <i class="fas fa-map-marker-alt"></i>
+			<label for="ville"></label> : <input type="text" name="pseudo" id="pseudo"
+            value="Marseilleee, France" size="30" maxlength="20"/>
+		</p>
+    </div>
+
+    <div class="icones">
+    <i class="fas fa-chart-line">icone fleche</i>
+
+    <i class="fas fa-chart-line"></i>
+    
+    <i class="fas fa-child">enfant</i>
+    <i class="fab fa-gratipay">coeur</i>
+    <i class="fas fa-heart"></i>
+    <i class="far fa-heart"></i>
+    <i class="fas fa-info-circle"></i>
+    
+    <i class="fas fa-mouse-pointer"></i>
+    <i class="fas fa-dog"></i>
+    </div>
+
+</section>
+
+
+
+<footer>
+
+
+</footer>
+</main>
+	</body>	
+
+    <div class="filters">
+        <span class="filters__title">Filtres</span>
+        <div class="filters__options">
+          <input name="type-hebergement" id="economique" type="checkbox" value="economique" />
+          <label for="economique" class="filter-option">
+            <span aria-hidden="true" class="filter-option__icon">
+              <i class="fas fa-money-bill-wave"></i>
+            </span>
+            <span class="filter-option__label">Économique</span>
+          </label>
+          <input name="type-hebergement" id="familial" type="checkbox" value="familial" />
+          <label for="familial" class="filter-option">
+            <span aria-hidden="true" class="filter-option__icon">
+              <i class="fas fa-child"></i>
+            </span>
+            <span class="filter-option__label">Familial</span>
+          </label>
+          <input name="type-hebergement" id="romantique" type="checkbox" value="romantique" />
+          <label for="romantique" class="filter-option">
+            <span aria-hidden="true" class="filter-option__icon">
+              <i class="fas fa-heart"></i>
+            </span>
+            <span class="filter-option__label">Romantique</span>
+          </label>
+          <input name="type-hebergement" id="animaux-autorises" type="checkbox" value="animaux-autorises" />
+          <label for="animaux-autorises" class="filter-option">
+            <span aria-hidden="true" class="filter-option__icon">
+              <i class="fas fa-dog"></i>
+            </span>
+            <span class="filter-option__label">Animaux autorisés</span>
+          </label>
+        </div>
+      </div>
+    </form>
+    <p class="results-info">
+      <span class="results-info__icon"><i aria-hidden="true" class="fas fa-info"></i></span>
+      Plus de 500 logements sont disponibles dans cette ville
+    </p>
+    
+    
+    
+    
+    
+-->   
+
+<!----- trop complqué --
+<form>
+<div class="lignecontainer"><span class="filtres">Filtres</span>
+  <span class="input"><input type="rond" name="pseudo" value=""/><i class="fas fa-money-bill-wave" aria-hidden="true"></i></span>
+    <input type="button" name="pseudo" value="Economique"/> 
+
+    <span class="input"><input type="rond" name="pseudo" value=""/><i class="fas fa-child" aria-hidden="true"></i></span>
+            <input type="button" name="pseudo" value="Familial"/>
+
+   <span class="input"><input type="rond" name="pseudo" value=""/><i class="fas fa-heart" aria-hidden="true"></i></span>    
+            <input type="button" name="pseudo" value="Romantique"/>  
+            
+    <span class="input"><input type="rond" name="pseudo" value=""/><i class="fas fa-dog" aria-hidden="true"></i></span>
+            <input type="button" name="pseudo" value="Animaux autorisés"/>           
+ 
+</div>							
+</form>
+--->
