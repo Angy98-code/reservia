@@ -1,3 +1,330 @@
-h1 {
-    color: red;
+@font-face 
+{
+    font-family: 'ralewaybold';
+    src: url('fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('fonts/raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'ralewayextrabold';
+    src: url('fonts/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('fonts/raleway-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'ralewaysemibold';
+    src: url('fonts/raleway-semibold-webfont.woff2') format('woff2'),
+         url('fonts/raleway-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'ralewaymedium';
+    src: url('fonts/raleway-medium-webfont.woff2') format('woff2'),
+         url('fonts/raleway-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'ralewayregular';
+    src: url('fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* enlever les font family non utiles*/
+body
+{
+    font-family: "ralewayregular", "ralewayextrabold", "ralewaymedium", "ralewaybold", arial, sans-serif;
+    font-size: 40px;
+    padding:50px;
+    padding-top: 80px;
+    color: black;
+    min-width: 375px;
+    height: auto;
+    border: black solid 3px;
+    margin: 0px;
+    
+}
+/* 1ère partie header */
+.premsentete
+{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap : 50px;
+    row-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+.premsentete a
+{
+    text-decoration: none;
+    color: black;
+    font-family: "ralewaysemibold";
+
+}
+/* hover ne fonctionne pas*/
+a:hover
+{
+    text-decoration: none;
+    color:#0065FC;
+    font-weight: bold;
+}
+
+a:focus
+{
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 3px solid #0065FC;
+    color: #0065FC;
+    padding: 16px;
+    width: 49.5%;
+   /*pas encore bon*/
+}
+
+.logo img
+{
+    width: 250px;
+}
+
+.logo
+{
+    grid-column: 1/2;
+   grid-row: 1/2;
+   justify-self: start;
+}
+
+.heb
+{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: center;
+   
+}
+
+.act
+{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+}
+
+.ins
+{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+}
+
+.lignegauche
+{
+    border-bottom: #f2f2f2;
+    left: 50%;
+}
+
+.lignedroite
+{
+   border-bottom: #f2f2f2; 
+   right: 50%;
+}
+
+/* 2ème header*/
+.entetedeux
+{
+    margin-top: 85px;
+}
+
+h1
+{
+    font-size: 55px ;
+    font-family: "ralewaymedium";
+}
+
+h2
+{
+    font-size: 40px;
+    font-family: "ralewayregular";
+}
+
+/*bouton recherche ok*/
+.englobe
+{
+    display: flex;
+    padding-top: 25px;
+}
+.containerrecherche
+{
+    display: flex;
+    height: 122px;
+    width: 850px;
+    border: solid 3px #F2F2F2;
+    border-radius : 15px 0px 0px 15px;
+    margin-right: 0px;
+    border-right: 0px;
+}
+.containermars
+{
+    display: flex;
+}
+.infoinconn
+{
+    background-color:#F2F2F2;
+    width: 120px;
+    position: relative;
+    border-radius: 12px 0 0 12px;
+}
+.iif
+{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+}
+.inputmarss  
+{
+    display: flex;
+    border: none;
+    font-family: "ralewayextrabold";
+    font-size: 20px;
+    padding-left: 18px;
+    outline: none; 
+    cursor: pointer;
+}
+.buttoninfo
+{
+    display: flex;
+    background-color:#0065FC;
+    color: white;
+    align-items: center;
+    border: 2px solid #0065FC;
+    border-radius: 15px 15px 15px 15px;
+    height: 126px;
+    width: 126px;
+    margin-left: -20px;
+    padding: 0 13px 0 13px;
+    font-family: "ralewaybold";
+    font-size: 18px;
+    outline: none;
+    cursor: grab;
+    position: relative;
+}
+.buttoninfo i
+{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+}
+.buttoninfo:active
+{
+    transform: translateY(1px);
+    box-shadow: 0 9px;
+}
+
+/*pour les balises filtres ok*/
+
+.containerdesfiltres
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.titrefiltre
+{
+    font-size: 20px;
+    font-family: "ralewaybold";
+    flex-wrap: wrap;
+}
+.filtrecontainer
+{
+    display: flex;
+    cursor: grab;
+
+}
+.filtreicon
+{
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    border : #DEEBFF solid 2px;
+    background-color: #DEEBFF;
+    margin-left: 9px;
+    position: absolute;
+    z-index: 1;
+}
+.filtrelabel
+{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    font-family: "ralewaybold";
+    font-size: 14px;
+    border: 2px #d1d1d1 solid; 
+    border-radius: 22px;
+    padding: 0 11px 0 40px; 
+    margin-left: 12px;
+    position: relative;
+    width: auto;
+}
+.filtreicon i
+{
+    color:#0065FC; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-weight: bold;
+    font-size: 18px;
+}
+/*texte icon info ok */
+.texteinfo
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.containerinfo
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: solid 3px #F2F2F2;
+    position: relative;
+}
+.iconinfo
+{
+    color: #0065FC;
+    font-size: 9px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.infoinfo
+{
+    
+    display:flex;
+    flex-wrap: wrap;
+    font-family: "ralewaymedium";
+    margin-left: 10px;
+    font-size: 12px;
 }
