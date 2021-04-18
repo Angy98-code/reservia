@@ -6,28 +6,31 @@
 	<link rel="stylesheet" href="essai.css"/>
   <!----ajouter un autre css pour autre résolution-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-     <title>reservia 1280px</title>
+     <title>taille 1100px</title>
     <script src="https://kit.fontawesome.com/941542f664.js" crossorigin="anonymous"></script>
   	</head>
-	
       <body>
 <div class="blocpage">
-<header>
-<div class=entetegauche>
-  <p><img src="Reservia.svg" alt="reservia" id="logo"/></p>
+<header class="headerprincipal">
+<div><p><img src="Reservia.svg" alt="reservia" id="logo"/></p></div>
+<div class="entetedroite">
+  <a href="#" class="heb">Hébergements</a>
+  <a href="#" class="act">Activités</a>
+  <a href="#" class="ins">s'inscrire</a>
+</div>
+</header>
+<header class="entetegauche">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p>En plein centre ville ou en pleine nature </p>   
-
+        <p class="pleinenature">En plein centre ville ou en pleine nature </p>   
 <!--faire au plus simple 1 div qui englobe(à cause du rechercher) + 1 div principale, 1div pour div icon, 1 input et 1 bouton
 résultat même taille-  finition nickel colle sans déborder!-->
 <div class="englobe">
   <div class="containerrecherche">
     <div class="containermars">
     <div class="infoinconn"><i class="fas fa-map-marker-alt iif" aria-hidden="true"></i></div></div>
-
    <input class="inputmarss" type="search" name="nomdelaville" value="Marseille, France" onclick="this.value='';"/>
-</div>
-<div> <!--obligé de faire une div à part car si button est dans le container il reste plus petit puisque
+  </div>
+  <div> <!--obligé de faire une div à part car si button est dans le container il reste plus petit puisque
 pas de border et même en augmentant c'est le container qui grandit et button toujours plus petit-->
   <button class="buttoninfo">Rechercher</button>  
    </div>
@@ -36,35 +39,27 @@ pas de border et même en augmentant c'est le container qui grandit et button to
 <!--ok compris maintenant /merci à Benjamin :)-->
 <div class="containerdesfiltres">
 <h3 class="titrefiltre">Filtres</h3>
-
 <div class="filtrecontainer">
   <div class="filtreicon">
-    <i class="fas fa-money-bill-wave iicon" aria-hidden="true">
-    </i> 
+    <i class="fas fa-money-bill-wave iicon" aria-hidden="true"></i>
 </div>
 <span class="filtrelabel">Économique</span>
 </div>
-
 <div class="filtrecontainer">
   <div class="filtreicon">
-    <i class="fas fa-child iicon" aria-hidden="true">
-    </i> 
+    <i class="fas fa-child iicon" aria-hidden="true"></i> 
 </div>
 <span class="filtrelabel">Familial</span>
 </div>
-
 <div class="filtrecontainer">
   <div class="filtreicon">
-    <i class="fas fa-heart iicon" aria-hidden="true">
-    </i> 
+    <i class="fas fa-heart iicon" aria-hidden="true"></i> 
 </div>
 <span class="filtrelabel">Romantique</span>
 </div>
-
 <div class="filtrecontainer">
   <div class="filtreicon">
-    <i class="fas fa-dog iicon" aria-hidden="true">
-    </i> 
+    <i class="fas fa-dog iicon" aria-hidden="true"></i> 
 </div>
 <span class="filtrelabel">Animaux autorisés</span>
 </div>
@@ -75,34 +70,118 @@ pas de border et même en augmentant c'est le container qui grandit et button to
 <div class="containerinfo"><i class="fas fa-info iconinfo" aria hidden="true"></i></div>
   <span class="infoinfo"> Plus de 500 logements sont disponibles dans cette ville</span>
 </div>
-</div> <!--fin entetegauche ?-->
-<div class="entetedroite">
-      
-            <a href="#" class="heb">Hébergements</a>
-            <a href="#" class="act">Activités</a>
-            <a href="#" class="ins">s'inscrire</a>
-      
-</div>
+</div> 
 </header>
+
 
 <section>
 <article>
-<H1>Hébergements à Marseille</H1> 
-<figure class="cannebiere"><img src="images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="cannebière"/>
-    <figcaption><H2>Auberge la Cannebière</H2>Nuit à partir de <strong>25€</strong></br>
-         <span class="note">
-        <div class="notewrap">
-            <span class="starsactive" style="width:100%">
-              <i aria-hidden="true" class="fas fa-star active"></i>   
-              <i aria-hidden="true" class="fas fa-star active"></i> 
-              <i aria-hidden="true" class="fas fa-star active"></i> 
-              <i aria-hidden="true" class="fas fa-star active"></i> 
-              <i aria-hidden="true" class="fas fa-star inactive"></i>
-            </span>
+  <H2>Hébergements à Marseille</H2> 
+<!--<div class="containerarticle">
+  <div class="cannebiere">
+  <a href="#" class="cannebiere"><img src="images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="cannebière"/>
+    <p><H2>Auberge la Cannebière</H2>Nuit à partir de <strong>25€</strong><p><br/>
+<div class="note">
+  <div class="etoiles">
+    <i class="fa fa-star bleu"></i>
+    <i class="fa fa-star bleu"></i>
+    <i class="fa fa-star bleu"></i>
+    <i class="fa fa-star bleu"></i>
+    <i class="fa fa-star"></i>
+  </div>
+  </div>
+</div>         
+    </a>-->
 
-            </div>
-    </figcaption>    
+<div class="containerarticle">
+<a href="#"  class="items un"></a>
+<a href="#"  class="items deux"></a>
+<a href="#" class="items trois"></a>
+<a href="#" class="items quatre"></a>
+<a href="#" class="items cinq"></a>
+<a href="#" class="items six"></a>
+</div>
+<div class="afficher"><a href="#"><H3>Afficher plus</H3></a></div>
+
+</article>
+
+<aside>  
+<H2>Les plus populaires<i class="fas fa-chart-line" aria-hidden="true"></i><H2>
+<div class="containeraside">
+  <a href="#"  class="sept"></a>
+<a href="#" class="huit"></a>
+<a href="#"  class="neuf"></a>
+</div>
+</aside>
+<nav>
+  <H2>Activités à Marseille</H2>
+  <div class="containernav">
+  <a href="#"  class="dix">dix</a>
+  <a href="#" e class="onze">onze</a>
+  <a href="#"  class="douze">douze</a>
+  <a href="#"  class="treize">treize</a>
+  <a href="#"  class="quatorze">quatorze</a>
+  <a href="#"  class="quinze">quinze</a>
+  </div>
+</nav>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<section>
+<article>
+
+<a href="#" class="cannebiere"><img src="images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="cannebière"/>
+    <p><H2>Auberge la Cannebière</H2>Nuit à partir de <strong>25€</strong><p><br/>
+<div class="note">
+  <div class="etoiles">
+    <i class="fa fa-star bleu"></i>
+    <i class="fa fa-star bleu"></i>
+    <i class="fa fa-star bleu"></i>
+    <i class="fa fa-star bleu"></i>
+    <i class="fa fa-star"></i>
+  </div>
+</div>         
+    </a>
+
+
+
+
+
+    <div class="note4etoiles">
+      <i class="fas fa-star active" type="actif" aria-hidden="true"></i>
+      <i class="fas fa-star active" aria-hidden="true"></i>
+      <i class="fas fa-star active" aria-hidden="true"></i>
+      <i class="fas fa-star active" aria-hidden="true"></i>
+      <i class="fas fa-star inactive" aria-hidden="true"></i>
+    </div>     
+      </figcaption>    
 </figure>  
+
+
+
+
+
 <figure class="port"><img src="images/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="port"/>
     <figcaption><H2>Hôtel du port</H2>Nuit à partir de <strong>52€</strong></br>
     <i aria-hidden="true" class="fas fa-star active"></i>   
@@ -150,9 +229,9 @@ pas de border et même en augmentant c'est le container qui grandit et button to
 </figure> 
 <p>Afficher plus</p> 
 </article>
-
+----
 <aside>
-<H1>Les plus populaire<i class="fas fa-chart-line"></i></H1>     
+    
 <figure class="matin"><img src="images/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="matin"/>
     <figcaption><H2>Hôtel Le soleil du matin</H2>Nuit à partir de <strong>128€</strong></br>
     <i aria-hidden="true" class="fas fa-star active"></i>   
@@ -186,6 +265,15 @@ pas de border et même en augmentant c'est le container qui grandit et button to
 <H1>Activités à Marseille</H1>
 </nav>
 </section>
+
+
+
+
+
+
+
+
+-->
 <footer>
 <div class="apropos">
     <H3>A propos</H3>
@@ -215,22 +303,7 @@ pas de border et même en augmentant c'est le container qui grandit et button to
 </div>
 </body>
 
-<!---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--
 
 <main>
 
@@ -265,7 +338,7 @@ pas de border et même en augmentant c'est le container qui grandit et button to
     <div class="icones">
     <i class="fas fa-chart-line">icone fleche</i>
 
-    <i class="fas fa-chart-line"></i>
+   
     
     <i class="fas fa-child">enfant</i>
     <i class="fab fa-gratipay">coeur</i>
