@@ -47,16 +47,18 @@ body
 {
     font-family: "ralewayregular", "ralewayextrabold", "ralewaymedium", "ralewaybold", arial, sans-serif;
     font-size: 40px;
-    padding:50px;
     padding-top: 80px;
     color: black;
-    min-width: 375px;
     height: auto;
-    border: black solid 3px;
-    margin: 0px;
+    margin: 0;
     
 }
 /* 1ère partie header */
+main, header
+{
+    padding : 0 50px 30px 50px;
+}
+
 .premsentete
 {
     display: grid;
@@ -67,25 +69,22 @@ body
     row-gap: 20px;
     justify-content: space-between;
     align-items: center;
-   
-    
 }
 .premsentete a
 {
     text-decoration: none;
     color: black;
     font-family: "ralewaysemibold";
-
 }
 /* hover ne fonctionne pas*/
-a:hover
+header a:hover
 {
     text-decoration: none;
     color:#0065FC;
     font-weight: bold;
 }
 
-a:focus
+header a:focus /* c bon ? */
 {
     text-decoration: none;
     font-weight: bold;
@@ -130,41 +129,41 @@ a:focus
     justify-self: end;
 }
 
-.lignegauche
-{
-    border-bottom: #f2f2f2;
-    left: 50%;
-}
-
-.lignedroite
-{
-   border-bottom: #f2f2f2; 
-   right: 50%;
-}
-
 /* 2ème header*/
 .entetedeux
 {
-    margin-top: 85px;
+    margin-top: 80px;
 }
 
 h1
 {
     font-size: 55px ;
-    font-family: "ralewaymedium";
+    font-family: "ralewaybold";
+    font-weight: bold;
 }
 
 h2
 {
-    font-size: 40px;
+    font-size: 37px;
     font-family: "ralewayregular";
+}
+h3
+{
+    font-size: 35px;
+    font-family: "ralewayregular";
+}
+
+.nature
+{
+    font-family: "ralewayregular";
+    font-size: 41px;
 }
 
 /*bouton recherche ok*/
 .englobe
 {
     display: flex;
-    padding-top: 25px;
+    padding-top: 70px;
 }
 .containerrecherche
 {
@@ -172,10 +171,12 @@ h2
     height: 122px;
     width: 850px;
     border: solid 3px #F2F2F2;
-    border-radius : 15px 0px 0px 15px;
+    border-radius : 40px 0px 0px 40px;
     margin-right: 0px;
     border-right: 0px;
+  
 }
+
 .containermars
 {
     display: flex;
@@ -183,9 +184,9 @@ h2
 .infoinconn
 {
     background-color:#F2F2F2;
-    width: 120px;
+    width: 125px;
     position: relative;
-    border-radius: 12px 0 0 12px;
+    border-radius: 35px 0 0 35px;
 }
 .iif
 {
@@ -194,15 +195,15 @@ h2
     transform: translate(-50%, -50%);
     position: absolute;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 40px;
 }
 .inputmarss  
 {
     display: flex;
     border: none;
     font-family: "ralewayextrabold";
-    font-size: 20px;
-    padding-left: 18px;
+    font-size: 45px;
+    padding-left: 40px;
     outline: none; 
     cursor: pointer;
 }
@@ -213,10 +214,10 @@ h2
     color: white;
     align-items: center;
     border: 2px solid #0065FC;
-    border-radius: 15px 15px 15px 15px;
-    height: 126px;
-    width: 126px;
-    margin-left: -20px;
+    border-radius: 40px 40px 40px 40px;
+    height: 127px;
+    width: 127px;
+    margin-left: -40px;
     padding: 0 13px 0 13px;
     font-family: "ralewaybold";
     font-size: 18px;
@@ -231,11 +232,11 @@ h2
     transform: translate(-50%, -50%);
     position: absolute;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 40px;
 }
 .buttoninfo:active
 {
-    transform: translateY(1px);
+    transform: translateY(4px);
     box-shadow: 0 9px;
 }
 
@@ -245,24 +246,27 @@ h2
 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+
 }
 .titrefiltre
 {
-    font-size: 20px;
+    display: flex;
+    font-size: 40px;
     font-family: "ralewaybold";
-    flex-wrap: wrap;
+    padding-right: 100%;
+ 
 }
 .filtrecontainer
 {
-    display: flex;
     cursor: grab;
 
 }
 .filtreicon
 {
     border-radius: 100%;
-    width: 45px;
-    height: 45px;
+    width: 130px;
+    height: 130px;
     border : #DEEBFF solid 2px;
     background-color: #DEEBFF;
     margin-left: 9px;
@@ -272,16 +276,19 @@ h2
 .filtrelabel
 {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    height: 45px;
-    font-family: "ralewaybold";
-    font-size: 14px;
-    border: 2px #d1d1d1 solid; 
-    border-radius: 22px;
-    padding: 0 11px 0 40px; 
+    height: 125px;
+    font-family: "ralewayextrabold";
+    font-size: 38px;
+    border: 5px #d1d1d1 solid; 
+    border-radius: 100px;
+    padding: 0 55px 0 150px; 
     margin-left: 12px;
+    margin-right: 20px;
     position: relative;
     width: auto;
+    margin-bottom: 30px;
 }
 .filtreicon i
 {
@@ -291,29 +298,28 @@ h2
     transform: translate(-50%, -50%);
     position: absolute;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 48px;
 }
 /*texte icon info ok */
 .texteinfo
 {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+   
 }
 .containerinfo
 {
-    display: flex;
-    flex-wrap: wrap;
-    width: 15px;
-    height: 15px;
+    padding-right: 20px;
+   
+    width: 55px;
+    height: 55px;
     border-radius: 100%;
-    border: solid 3px #F2F2F2;
+    border: solid 4px #e0dfdf;
     position: relative;
 }
 .iconinfo
 {
     color: #0065FC;
-    font-size: 9px;
+    font-size: 35px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -322,9 +328,265 @@ h2
 .infoinfo
 {
     
-    display:flex;
-    flex-wrap: wrap;
+   
     font-family: "ralewaymedium";
-    margin-left: 10px;
-    font-size: 12px;
+    padding-left: 25px;
+    font-size: 42px;
 }
+main
+{
+    margin-bottom: 90px;
+}
+
+
+
+/* article */
+article
+{
+    background-color: #F2F2F2;
+    padding : 40px 0px 0px 0px;
+    margin:0;
+    height: 4000px;
+   
+}
+article H1
+{
+    padding-left: 50px;
+}
+
+
+.afficher
+{
+    margin: 0 50px 0 50px;
+    text-decoration: none;
+    color: black; 
+}
+
+strong
+{
+    font-family: "ralewaybold";
+}
+
+article .phrase
+{
+    font-size: 35px;
+    font-family: "ralewayregular";
+    padding-top: 0px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+  
+}
+article H2
+{
+    font-family: "ralewaybold";
+    font-size: 42px;
+    padding-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;   
+}
+article .etoiles
+{
+    font-size: 30px;
+    padding-top: 16px;
+    margin-top: 0px;
+   
+}
+article i
+{
+    color: #F2F2F2;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+}
+
+article .bleu
+{
+    color: #0065FC;
+} 
+
+
+article .note
+{  
+    font-size: 20px;
+    border: 0;
+    color: black;
+    padding-left: 30px;
+}
+.containerarticle
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+article .carte
+{
+    width: 840px;
+    height: 350px;
+    background-color: white;
+    padding: 10px 10px 140px 10px;
+    margin: 15px 0 15px 0;
+    border-radius: 55px;
+    /*flex: 3; */
+}
+article img
+{   
+    width: 100%;
+    height: 80%;    
+    object-fit: cover; /*image nickel*/
+    border-radius: 50px 50px 0 0;
+}
+
+
+
+/*article i
+{
+    color: #F2F2F2;
+}
+article i[bleu]
+{
+    color: #0065FC;
+} */
+
+/*
+.note {
+    display: block;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .notewrap {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 19px;
+  }
+  
+  .note .starsactive {
+    color: #0065FC;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+  }
+  
+  .note .starsinactive 
+  {
+    color:white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-text-stroke: initial;
+    overflow: hidden;
+  }
+*/
+
+aside
+{
+    background-color: #F2F2F2;
+    padding : 40px 0px 0px 0px;
+    margin:0;
+    height: 1500px;
+    display: flex;
+    
+   
+}
+aside H1
+{
+    padding-left: 50px;
+}
+
+aside H2
+{
+    font-family: "ralewaybold";
+    border:0;
+}
+/*.note bon pour tous ???
+{  
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 20px; */
+
+.containeraside
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: right;
+    margin: 0 50px 0 50px;
+}
+aside .carte
+{
+    display: flex;
+    width: 720px;
+    height: 370px;
+    background-color:white;
+    padding: 10px 140px 10px 10px;
+    margin: 15px 0 15px 0;
+    border-radius: 55px;
+ /* flex: 3;*/
+}
+ aside img
+{   
+    object-fit: cover;
+    width: 46%;
+    height: 100%;    
+    border-radius: 50px 0px 0px 50px; 
+}
+
+
+aside .phrase
+{
+    font-size: 35px;
+    font-family: "ralewayregular";
+    padding-top: 0px;
+    
+    margin-bottom: 0px;
+  
+}
+aside H2
+{
+    font-family: "ralewaybold";
+    font-size: 42px;
+    padding-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;   
+}
+aside .etoiles
+{
+    font-size: 30px;
+    padding-top: 16px;
+    margin-top: 0px;
+   
+}
+aside i
+{
+    color: #F2F2F2;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+}
+
+aside .bleu
+{
+    color: #0065FC;
+} 
+
+
+aside .note
+{  
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+    color: black;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:flex-start;
+   
+ 
+  
+
+
+}
+
