@@ -61,90 +61,96 @@ body
     margin: 0;    
 }
 /* 1ère partie header */
+
 header
-{
-    padding : 0 50px 10px 50px;
-}
-
-.premsentete
-{
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap : 50px;
-    row-gap: 20px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.premsentete a
 {
     text-decoration: none;
     color: black;
     font-family: "ralewaysemibold";
-    font-size: 40px;
-}
-/* hover ne fonctionne pas*/
-header a:hover
-{
-    text-decoration: none;
-    color:#0065FC;
-    font-weight: bold;
-    border-bottom: #0065FC solid 20px;
-    padding-bottom: 70px;
-    width: 250px;
+    font-size: 41px;
+    margin: 0;
+    padding : 70px 50px 50px 50px;
 }
 
-header a:focus /* c bon ? */
-{
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 3px solid #0065FC;
-    color: #0065FC;
-    padding: 16px;
-    width: 49.5%;
-   /*pas encore bon*/
-}
 
-.logo img
+.change
 {
-    width: 250px;
-}
-
-.logo
-{
-   grid-column: 1/2;
-   grid-row: 1/2;
-   justify-self: start;
-}
-
-.heb
-{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    justify-self: center;
-}
-
-.act
-{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .ins
 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    justify-self: end;
+text-decoration: none;
+color: #0065FC;
+font-weight: bold;
 }
+
+.heb
+{
+   padding: 0 200px 0 50px;
+}
+
+.heb
+{
+text-decoration: none;
+color: black;
+font-family: "ralewayregular";
+border-bottom: 6px #F2F2F2 solid;
+padding-bottom: 30px;
+width: 50%;
+
+}
+
+
+.act
+{
+text-decoration: none;
+color: black;
+font-family: "ralewayregular";
+border-bottom: 6px #F2F2F2 solid;
+padding-bottom: 30px;
+width: 50%;
+
+}
+
+header nav a:focus
+{
+    color : #0065FC;
+    border-bottom: solid 6px #0065FC;
+}
+
+
+#logo img
+{
+    width: 250px;
+    padding-right: 150px;
+}
+
+/*@media screen and (min-width:768px) {
+    .logo img
+    {
+        width: 50px;
+    }    
+}
+*/
 
 /* 2ème header*/
 .entetedeux
 {
     margin-top: 80px;
     padding-bottom: 100px;
+    padding : 0 50px 10px 50px;
+}
+
+::placeholder
+{
+    font-family: "ralewayextrabold";
+    color: black;  
+    opacity: 1;
 }
 
 h1
@@ -363,6 +369,11 @@ article
     margin:0;
 }
 
+.titrearticle
+{
+  padding-left: 50px;
+}
+
 .afficher
 {
     font-size: 48px;
@@ -420,6 +431,7 @@ article .note
     border: 0;
     color: black;
     padding-left: 30px;
+    text-decoration: none;
 }
 
 .containerarticle
@@ -443,7 +455,7 @@ article .carte
     padding: 12px 12px 140px 12px;
     margin: 15px 0 15px 0;
     border-radius: 55px;
-    box-shadow: 10px 10px 12px rgb(218, 216, 216);
+    box-shadow: 1px 10px 10px rgb(233, 231, 231);
 }
 
 article img
@@ -458,28 +470,85 @@ article img
 aside
 {
     background-color: #F2F2F2;
-    padding-top: 30px;   
-    padding-bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 70px;
+    padding: 40px 0px 70px 0px;
+    margin-top: 60px;
 }
+
+aside strong
+{
+    font-size: "ralewayregular";
+    font-weight: normal;
+}
+
+.mark
+{
+    font-family: "ralewayextrabold";
+}
+
+aside .phrase
+{
+    font-size: 35px;
+    font-family: "ralewayregular";
+}
+
+aside H2
+{
+    font-family: "ralewaybold";
+    font-size: 42px;
+    padding-top: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    padding-right: 0%;
+    text-decoration: none;  
+}
+
+aside .etoiles
+{
+    font-size: 28px;
+    padding-top:80px;
+}
+
+aside i
+{
+    color: #F2F2F2;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+aside .bleu
+{
+    color: #0065FC;
+} 
+
+aside .note
+{  
+    font-size: 15px;
+    text-align: bottom;
+    margin-left: 5px;
+    color: black;
+    text-decoration: none;
+}
+
 
 .containeraside
 {
     display: flex;
-    flex-wrap: wrap;   
-    padding: 10px;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    text-decoration: none;
+}
+
+
+aside a
+{
+    text-decoration: none;
 }
 
 aside .carte
 {
-    display: flex;
-    flex-direction: row;
     padding: 12px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
     border-radius: 55px;
     height: 350px;
     width: 840px;
@@ -497,17 +566,11 @@ aside img
     object-fit: cover;
 }
 
+/*en plus */
 aside .phrase
 {
     font-size: 35px;
     font-family: "ralewayregular";
-    padding-top: 0px;
-    margin-bottom: 0px;
-}
-
-.titrearticle
-{
-  padding-left: 50px;
 }
 
 .titrepop
@@ -531,58 +594,6 @@ aside .phrase
 font-family: "ralewaysemibold";
 }
 
-aside H2
-{
-    font-family: "ralewaybold";
-    font-size: 42px;
-    padding-top: 30px;
-    margin-top: 0px;
-    margin-bottom: 0px; 
-    padding-right: 0%;  
-}
-
-aside .etoiles
-{
-    font-size: 28px;
-    /* propriete flex? */
-    padding-top:80px;
-}
-
-aside i
-{
-    color: #F2F2F2;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-aside .bleu
-{
-    color: #0065FC;
-} 
-
-aside .note
-{  
-    font-size: 15px;
-    text-align: bottom;
-    margin-left: 5px;
-}
-
-aside strong
-{
-    font-size: "ralewayregular";
-    font-weight: normal;
-}
-
-.mark
-{
-    font-family: "ralewayextrabold";
-}
-
-aside .phrase
-{
-    font-size: 35px;
-    font-family: "ralewayregular";
-}
 
 /* nav */
 nav H2
