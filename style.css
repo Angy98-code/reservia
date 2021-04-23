@@ -61,7 +61,6 @@ body
     margin: 0;    
 }
 /* 1ère partie header */
-
 header
 {
     text-decoration: none;
@@ -69,7 +68,7 @@ header
     font-family: "ralewaysemibold";
     font-size: 41px;
     margin: 0;
-    padding : 70px 50px 50px 50px;
+    padding-top: 60px;
 }
 
 
@@ -77,7 +76,7 @@ header
 {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 60px;
+    row-gap: 70px;
     justify-content: space-between;
     align-items: center;
 }
@@ -87,12 +86,15 @@ header
 text-decoration: none;
 color: #0065FC;
 font-weight: bold;
+padding-right: 50px;
 }
 
-.heb
+header nav
 {
-   padding: 0 200px 0 50px;
+    display: flex;
+    justify-content: space-around;
 }
+
 
 .heb
 {
@@ -102,7 +104,8 @@ font-family: "ralewayregular";
 border-bottom: 6px #F2F2F2 solid;
 padding-bottom: 30px;
 width: 50%;
-
+padding-left: 90px;
+padding-right: 50px;
 }
 
 
@@ -114,21 +117,51 @@ font-family: "ralewayregular";
 border-bottom: 6px #F2F2F2 solid;
 padding-bottom: 30px;
 width: 50%;
+padding-left:200px ;
 
 }
 
 header nav a:focus
 {
     color : #0065FC;
-    border-bottom: solid 6px #0065FC;
+    border-bottom: solid 8px #0065FC;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header a:hover
+{
+    color : #0065FC;
+    border-bottom: solid 8px #0065FC;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:focus, a:active
+{
+outline:none;
 }
 
 
 #logo img
 {
     width: 250px;
-    padding-right: 150px;
+    margin-left: 30px;
+    font-weight: bold;
 }
+
+header nav
+{
+    width: 100%;
+}
+
+/*@media screen and (min-width:768px) {
+    .logo img
+    {
+        width: 50px;
+    }    
+}
+
+
 
 /*@media screen and (min-width:768px) {
     .logo img
@@ -455,7 +488,7 @@ article .carte
     padding: 12px 12px 140px 12px;
     margin: 15px 0 15px 0;
     border-radius: 55px;
-    box-shadow: 1px 10px 10px rgb(233, 231, 231);
+    box-shadow: 1px 1px 30px rgb(233, 231, 231);
 }
 
 article img
@@ -553,7 +586,7 @@ aside .carte
     height: 350px;
     width: 840px;
     background-color: white;
-    box-shadow: 10px 10px 12px rgb(218, 216, 216);
+    box-shadow: 1px 1px 30px rgb(218, 216, 216);
 }
 
 aside img
@@ -627,7 +660,7 @@ nav .carte
     height: 500px;
     margin: 30px 0 30px 0;
     border-radius: 55px;
-    box-shadow: 10px 10px 12px rgb(218, 216, 216);
+    box-shadow: 1px 1px 30px rgb(218, 216, 216);
 }
 
 nav img
