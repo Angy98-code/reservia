@@ -60,6 +60,9 @@ body
     height: auto;
     margin: 0;    
 }
+
+
+
 /* 1ère partie header */
 header
 {
@@ -70,7 +73,22 @@ header
     margin: 0;
     padding-top: 60px;
 }
+@media screen and (min-width:1024px) {
+    header
+    {
+        font-size: 12px;
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+    }
+    .blocpage
+    {
+        font-size: 14px;
+        padding: 0px;
+    }
+    
 
+}
 
 .change
 {
@@ -81,6 +99,28 @@ header
     align-items: center;
 }
 
+@media screen and (min-width:1024px) {
+    .change
+    {
+     text-decoration: none;
+     border-bottom: none;
+     row-gap: 0px;
+     justify-content: space-between;
+     align-content: center;
+     padding-top: 35px;
+    }
+    header a   
+{
+    text-decoration: none;
+}
+
+
+
+}
+
+
+
+
 .ins
 {
 text-decoration: none;
@@ -88,13 +128,35 @@ color: #0065FC;
 font-weight: bold;
 padding-right: 50px;
 }
-
+@media screen and (min-width:1024px) {
+    .ins
+    {
+     font-weight: normal;
+     padding-right: 50px;
+     order: 1;
+     border-bottom: none;
+     border: none;
+     text-decoration: none;
+    }   
+}
 header nav
 {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
+@media screen and (min-width:1024px) {
+    header nav
+    {
+     font-weight: normal;
+    display: flex;
+     width: 0px;
+      border-bottom: none;
+    
+
+    }   
+}
 
 .heb
 {
@@ -107,7 +169,17 @@ width: 50%;
 padding-left: 90px;
 padding-right: 50px;
 }
+@media screen and (min-width:1024px) {
+    .heb
+    {
+        border: none;
+        padding: 0px;
+        width: 0px;
+        border-bottom: none;
+        
 
+    }   
+}
 
 .act
 {
@@ -118,7 +190,19 @@ border-bottom: 6px #F2F2F2 solid;
 padding-bottom: 30px;
 width: 50%;
 padding-left:200px ;
+}
 
+@media screen and (min-width:1024px) {
+    .act
+    {
+        border: none;
+        padding: 0px;
+        width: 0px;
+        border-bottom: none;
+        
+
+     
+    }   
 }
 
 header nav a:focus
@@ -148,18 +232,15 @@ outline:none;
     margin-left: 30px;
     font-weight: bold;
 }
-
-header nav
-{
-    width: 100%;
-}
-
-/*@media screen and (min-width:768px) {
-    .logo img
+@media screen and (min-width:1024px) {
+    #logo img
     {
-        width: 50px;
+        width: 70px;
+        padding-left: 0px;
     }    
 }
+
+
 
 
 
@@ -175,8 +256,17 @@ header nav
 .entetedeux
 {
     margin-top: 80px;
-    padding-bottom: 100px;
-    padding : 0 50px 10px 50px;
+   
+    padding : 0px 50px 10px 50px;
+}
+
+@media screen and (min-width:1024px) {
+    .entetedeux
+    {
+        margin-top: 30px;
+        padding: 0px 0px 0px 30px;
+        
+    }    
 }
 
 ::placeholder
@@ -192,6 +282,14 @@ h1
     font-family: "ralewaybold";
 }
 
+@media screen and (min-width:1024px) {
+    H1
+    {
+     font-size: 15px;
+     font-family: "ralewaymedium";
+    }   
+}
+
 h2
 {
     font-size: 37px;
@@ -204,10 +302,22 @@ h3
     font-family: "ralewayregular";
 }
 
-.nature
+.naturephrase
 {
     font-size: 40px;
     font-family: "ralewayregular";
+}
+
+@media screen and (min-width:1024px) {
+       
+    H2
+    {
+        font-size: 12px;
+    }
+    .naturephrase
+    {
+        font-size: 12px;
+    }
 }
 
 /*bouton recherche ok*/
@@ -297,6 +407,85 @@ h3
     box-shadow: 0 9px;
 }
 
+@media screen and (min-width:1024px) {
+    .englobe
+    {
+        display: flex;
+        padding-top: 0px;
+    }
+    .containerrecherche
+    {
+        display: flex;
+        height: 34px;
+        border: solid 2px #F2F2F2;
+        border-radius : 15px 0px 0px 15px;
+        margin-right: 0px;
+        width: 200px;
+    }
+    .containermars
+    {
+        display: flex;
+    }
+    .infoinconn
+    {
+        background-color:#F2F2F2;
+        width: 35px;
+        position: relative;
+        border-radius: 12px 0 0 12px;
+    }
+    .iif
+    {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .inputmarss  
+    {
+        display: flex;
+        border: none;
+        font-family: "ralewayextrabold";
+        font-size: 13px;
+        padding-left: 18px;
+        outline: none; 
+        cursor: pointer;
+    }
+    .buttoninfo
+    {
+        display: flex;
+        background-color:#0065FC;
+        color: white;
+        align-items: center;
+        border: 2px solid #0065FC;
+        border-radius: 0 10px 10px 0;
+        height: 37px;
+        margin-left: 0px;
+        padding: 0 13px 0 13px;
+        font-family: "ralewaybold";
+        font-size: 13px;
+        outline: none;
+        cursor: grab;
+        width: 100px;
+    }
+    .buttoninfo:active
+    {
+    font-family: "ralewaybold";
+    
+    }      
+}
+
+@media (max-width: 1023px){
+    span.text{display:none}
+    span.icon {display: inline-block}
+}
+@media (min-width: 1024px) {
+    span.text {display:inline-block}
+    span.icon {display:none}
+}
+
+
 /*pour les balises filtres ok*/
 .containerdesfiltres
 {
@@ -358,6 +547,78 @@ h3
     font-weight: bold;
     font-size: 48px;
 }
+
+
+@media screen and (min-width:1024px) {
+       
+    .containerdesfiltres
+    {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 0px;
+        margin: 0px;     
+        margin-left : 15px; 
+        
+    }
+    .titrefiltre
+    {
+        display: flex;
+        font-size: 13px;
+        font-family: "ralewaysemibold";
+    }
+    .filtrecontainer
+    {
+        display: flex;
+        cursor: grab;
+        margin:0px;
+        margin-right: 10px;
+        padding : 0px;
+        align-content: center;
+    }
+    .filtreicon
+    {
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+        border : #DEEBFF solid 2px;
+        background-color: #DEEBFF;
+        margin-left: 9px;
+        position: absolute;
+        z-index: 1;
+    }
+    .filtrelabel
+    {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        font-family: "ralewaybold";
+        font-size: 13px;
+        border: 2px #d1d1d1 solid; 
+        border-radius: 22px;
+        padding: 0 12px 0 40px; 
+        margin:0px;
+        margin-left: 12px;
+        position: relative;
+        }
+    .filtreicon i
+    {
+        color:#0065FC; 
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .grandfiltre
+    {
+        display:flex;
+        flex-direction: row;
+        align-content: center;
+    }
+}
+
 /*texte icon info ok */
 
 .texteinfo
@@ -394,6 +655,44 @@ h3
     font-size: 42px;
 }
 
+
+@media screen and (min-width:1024px) {
+       
+    
+.texteinfo
+{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.containerinfo
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: solid 3px #F2F2F2;
+    position: relative;
+    padding:0px;
+}
+.iconinfo
+{
+    color: #0065FC;
+    font-size: 9px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.infoinfo
+{
+    font-family: "ralewaymedium";
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+}
+
+
 /* article */
 article
 {
@@ -401,7 +700,25 @@ article
     padding : 45px 0px 30px 0px;
     margin:0;
 }
-
+@media screen and (min-width:1024px) {
+      section 
+      {
+        margin: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px 35px 30px 35px;
+      }
+        article
+    {
+    
+        padding : 0px 10px 0px 30px;
+        background-color: #F2F2F2;
+        border-radius: 15px;
+        order: 0;
+        height: 750px;
+        width: 610px;
+    }
+}
 .titrearticle
 {
   padding-left: 50px;
@@ -413,8 +730,16 @@ article
     font-family: "ralewaybold";
     text-decoration: none;
     color: black; 
+    padding-left: 35px;
 }
-
+@media screen and (min-width:1024px) {
+    .afficher
+{
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+}
 article strong
 {
     font-family: "ralewaybold";
@@ -428,7 +753,12 @@ article .phrase
     margin-top: 15px;
     margin-bottom: 0px;  
 }
-
+@media screen and (min-width:1024px) {
+        article .phrase
+        {
+            font-size: 14px;
+        }   
+}
 article H2
 {
     font-family: "ralewaybold";
@@ -438,12 +768,33 @@ article H2
     margin-bottom: 0px;   
 }
 
+@media screen and (min-width:1024px) {
+    article H2
+{
+    font-size: 12px;
+    padding:0px
+}
+
+
+
+
+}
+
 article .etoiles
 {
     font-size: 32px;
     padding-top: 16px;
     margin-top: 0px;
     font-weight: bold;
+}
+
+@media screen and (min-width:1024px) {
+  article .etoiles
+   {
+    font-size: 9px;
+    padding-top: 5px;
+   } 
+
 }
 
 article i
@@ -467,6 +818,16 @@ article .note
     text-decoration: none;
 }
 
+@media screen and (min-width:1024px) {
+   
+    article .note
+    {
+        
+    font-size: 12px;
+    padding-left:0px;
+}
+}
+
 .containerarticle
 {
     display: flex;
@@ -474,6 +835,19 @@ article .note
     flex-direction: column;
     align-content: center;
 }
+/* dans le container ne pas mettre height et width **/
+@media screen and (min-width:1024px) {
+    .containerarticle
+{
+    display: flex;
+    flex-direction: row;
+flex-wrap: wrap;
+align-content: center;
+text-decoration: none;
+}
+
+}
+
 
 article a
 {
@@ -482,6 +856,7 @@ article a
 
 article .carte
 {
+    
     width: 850px;
     height: 360px;
     background-color: white;
@@ -491,6 +866,21 @@ article .carte
     box-shadow: 1px 1px 30px rgb(233, 231, 231);
 }
 
+@media screen and (min-width:1024px) {
+ article .carte
+    {
+        height: 80px;
+        width: 170px;
+        background-color: white;
+        border-radius: 15px;
+        padding: 3px 3px 60px 3px;
+        margin: 0px 20px 20px 0px;
+    }
+
+}
+
+
+
 article img
 {   
     width: 100%;
@@ -498,6 +888,15 @@ article img
     object-fit: cover; /*image nickel*/
     border-radius: 50px 50px 0 0;
 }
+@media screen and (min-width:1024px) {
+article img
+    {
+     display: flex;
+     border-radius: 15px 15px 0px 0px;   
+    }
+
+}
+
 
 /* aside */
 aside
@@ -505,6 +904,18 @@ aside
     background-color: #F2F2F2;
     padding: 40px 0px 70px 0px;
     margin-top: 60px;
+}
+
+@media screen and (min-width:1024px) {
+aside
+    {
+margin : 0;
+padding: 25px 0px 25px 0px;
+order : 1;
+border-radius: 15px;
+
+    }
+
 }
 
 aside strong
@@ -523,7 +934,13 @@ aside .phrase
     font-size: 35px;
     font-family: "ralewayregular";
 }
+@media screen and (min-width:1024px) {
+aside .phrase
+    {font-size: 10px;
+        
+    }
 
+}
 aside H2
 {
     font-family: "ralewaybold";
@@ -535,10 +952,31 @@ aside H2
     text-decoration: none;  
 }
 
+@media screen and (min-width:1024px) {
+aside H2
+    {
+        font-size: 10px;
+        padding : 0px 30px 0px 30px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+}
+
 aside .etoiles
 {
     font-size: 28px;
     padding-top:80px;
+}
+
+@media screen and (min-width:1024px) {
+aside .etoiles
+    {
+        font-size: 9px;
+        padding-top: 0px;
+    }
+
 }
 
 aside i
@@ -562,7 +1000,15 @@ aside .note
     text-decoration: none;
 }
 
+@media screen and (min-width:1024px) {
+aside .note
+    {
+        font-size: 9px;
+        margin-left: 0px;
 
+    }
+
+}
 .containeraside
 {
     display: flex;
@@ -571,6 +1017,7 @@ aside .note
     align-content: center;
     text-decoration: none;
 }
+
 
 
 aside a
@@ -589,6 +1036,21 @@ aside .carte
     box-shadow: 1px 1px 30px rgb(218, 216, 216);
 }
 
+@media screen and (min-width:1024px) {
+aside .carte
+    {
+        height: 60px;
+        width: 200px;
+      border-radius: 15px;
+        align-items: center;
+        align-content: space-around;
+        background-color: white;
+        margin : 5px 0 15px 0;
+    }
+
+}
+
+
 aside img
 {   
     float: left;
@@ -598,7 +1060,19 @@ aside img
     border-radius: 50px 0 0 50px;
     object-fit: cover;
 }
+@media screen and (min-width:1024px) {
+aside img
+    {
+       padding : 3px 30px 3px 3px ;
+       width: 80px;
+       height : 80px;
+       display:flex;
+       align-items : center; 
+        border-radius: 15px 0 0 15px;
 
+    }
+
+}
 /*en plus */
 aside .phrase
 {
@@ -606,12 +1080,29 @@ aside .phrase
     font-family: "ralewayregular";
 }
 
+
+@media screen and (min-width:1024px) {
+aside .phrase
+    {font-size: 10px;
+        
+    }
+
+}
 .titrepop
 {
     padding-left: 50px;
     display: flex;
     justify-content: space-between;
     font-family: "ralewaysemibold";
+}
+
+@media screen and (min-width:1024px) {
+.titrepop
+    {
+        padding-left: 15px;
+    
+    }
+
 }
 
 .titrepop i
@@ -622,6 +1113,16 @@ aside .phrase
     padding-right: 50px;
 }
 
+@media screen and (min-width:1024px) {
+.titrepop i
+    {
+      font-size: 10px;
+      padding-right: 15px;  
+    }
+
+}
+
+
 .titrenav
 {
 font-family: "ralewaysemibold";
@@ -629,6 +1130,17 @@ font-family: "ralewaysemibold";
 
 
 /* nav */
+
+@media screen and (min-width:1024px) {
+section nav
+    {
+      margin-top: 300px; 
+      order : 2; 
+    }
+
+}
+
+
 nav H2
 {
     display: flex;
@@ -671,6 +1183,147 @@ nav img
     object-fit: cover;
     overflow: hidden;
 }
+
+
+
+
+
+/* c'est un exemple  attention enlever le surplus lors du media sinon ca ressemble à rien */
+
+
+
+
+@media screen and (min-width:1024px) {
+
+
+main
+{
+  margin-left: 30px;
+
+    
+    width: 1024px;
+}
+.containermain
+{
+    height: 400px;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-rows: 150px 30px 30px 30px 20px 30px 100px;
+    grid-template-columns: 220px 220px 220px 220px;
+    row-gap: 26px;
+    column-gap: 26px;
+    align-items: flex-start;
+    margin-top: 15px;
+
+    /*grid-template-columns: repeat(3, 1fr);*/
+   /*gap: 30px;*/
+   /* grid-auto-rows: minmax(250px, auto);
+    align-items: flex-start;*/
+
+
+  /*align-items: flex-start;*/
+}
+
+.dix
+{
+
+    grid-column:1/2;
+    grid-row:1/3 ;
+    width: 220px;
+    height: 320px;
+    
+    }
+    
+    main H2
+    {
+    color: black;
+    font-family: "ralewaysemibold";
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+.onze
+{
+    background-color: cadetblue;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 220px ;
+    height: 180px;
+
+
+}
+.douze
+{
+    background-color: chocolate;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 220px;
+    height: 130px;
+    margin-top: 30px;
+
+}
+.treize
+{
+    background-color: cornflowerblue;
+    grid-column: 3/4;
+    grid-row: 1/3;
+    width: 220px;
+    height: 340px;
+}
+.quatorze
+{
+    background-color: darkkhaki;
+    grid-column: 4/5;
+    grid-row: 1/2;
+    width: 220px;
+    height: 150px;
+}
+.quinze
+{
+    background-color: darkorchid;
+    grid-column: 4/5;
+    grid-row: 2/3;
+    width: 220px;
+    height: 160px;
+    /*place self*/
+}
+main a
+{
+    margin: 0px;
+}
+/*.quatorze, .quinze
+{
+    align-self: start;*/
+
+main .carte
+{
+border-radius: 15px;
+box-shadow: 1px 1px 30px rgb(218, 216, 216);
+
+    object-fit: cover;
+    overflow: hidden;
+    text-decoration: none;
+
+
+
+}
+
+main img
+{
+width: 100%;
+height: 87%;
+border-radius: 15px 15px 0px 0px;
+}
+
+
+
+}
+
+
+
+
+
+
 
 /*footer ok */
 footer
@@ -716,3 +1369,44 @@ footer h3
     font-family: "ralewaymedium";
     font-size: 45px;
 }
+@media screen and (min-width:1024px) 
+{
+    footer
+    {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr 1fr 60px;
+        background-color: #F2F2F2;
+        margin: 0;
+        padding-bottom: 40px;
+        padding-top: 10px;
+        
+}
+
+footer h3
+{
+    font-family: "ralewaymedium";
+    font-size: 13px;
+}
+    .tabfooter
+    {
+        font-size: 12px;
+    }
+    footer a 
+    {
+        flex-direction: column; 
+        font-family: "ralewaymedium";
+        font-size: 13px;
+        padding: 15px 0 5px 0; /* ecart entre ligne */
+    }
+    .apropos 
+    {
+        padding: 10px 0 0px 50px;
+    }
+    .noshebergements, .assistance
+    {
+        padding: 10px 0 0px 43px;
+    }
+
+}
+
