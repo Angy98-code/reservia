@@ -49,6 +49,7 @@
 body
 {
     margin: 0;
+    height: 100vh;
 }
 
 .blocpage
@@ -71,6 +72,9 @@ header
     font-size: 41px;
     margin: 0;
     padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .change
@@ -241,6 +245,8 @@ header
 }
   
 /* 2ème header*/
+
+
 .entetedeux
 {
     margin-top: 80px;
@@ -292,6 +298,7 @@ h3
 {
     font-size: 40px;
     font-family: "ralewayregular";
+    word-break: keep-all;
 }
 
 @media screen and (min-width:1024px) {
@@ -488,6 +495,8 @@ h3
 .filtrecontainer
 {
     cursor: grab;
+    text-decoration: none;
+    color: black;
 }
 
 .filtreicon
@@ -531,6 +540,19 @@ h3
     font-size: 48px;
 }
 
+.filtrelabel
+{
+    text-decoration: none;
+    color: black;
+}
+
+.filtrelabel:hover
+{
+    color: #0065FC;
+    background-color:#F2F2F2;
+    text-decoration: underline;
+}
+
 @media screen and (min-width:1024px) {
     .containerdesfiltres
     {
@@ -557,6 +579,9 @@ h3
         margin-right: 10px;
         padding : 0px;
         align-content: center;
+        cursor: grab;
+        text-decoration: none;
+        color: black;
     }
 
     .filtreicon
@@ -603,6 +628,11 @@ h3
         flex-direction: row;
         align-content: center;
     }
+}
+
+.filtrecontainer#hover
+{
+    background-color: yellow;
 }
 
 /*texte icon info ok */
@@ -679,6 +709,9 @@ article
     background-color:white;
     padding : 45px 0px 30px 0px;
     margin:0;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (min-width:1024px) {
@@ -894,34 +927,180 @@ article img
     }
 }
 
+
+
+
 /* aside */
 aside
 {
     background-color: #F2F2F2;
-    padding: 40px 0px 70px 0px;
     margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 
 @media screen and (min-width:1024px) {
 aside
     {
-padding: 15px 25px 4px 25px;
+padding: 15px 20px 4px 20px;
 order : 1;
 border-radius: 15px;
 margin: 30px 0 0 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+flex-direction: column;
     }
 }
 
-aside strong
+@media screen and (min-width:768px) and (max-width:1023px) {
+    aside
+    {
+padding: 15px 20px 4px 20px;
+order : 1;
+border-radius: 15px;
+margin: 30px 0 0 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+flex-direction: column;
+    }
+    }
+
+.containeraside /* parent principal */
 {
-    font-size: "ralewayregular";
-    font-weight: normal;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    height: auto;
+    /*margin : 70px auto 0; */
+    justify-content: center;  
+    padding: 10px 0 80px 0;
 }
 
-.mark
+@media screen and (min-width:1024px) {
+.containeraside /* parent principal */
 {
-    font-family: "ralewayextrabold";
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    /*margin : 70px auto 0; */
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0;
 }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .containeraside
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        /*margin : 70px auto 0; */
+        justify-content: space-between;
+        padding: 0;
+}
+}
+
+aside .carte /* enfant de container et parent img et note */
+{
+   padding : 10px 0 10px 10px;
+   margin:  15px 0 15px 0;
+    border-radius: 55px;
+    height: 350px;
+    width: 840px;
+    background-color: white;
+    box-shadow: 1px 1px 30px rgb(218, 216, 216);
+}
+
+@media screen and (min-width:1024px) {
+aside .carte
+    {
+    padding:3px;
+    height: 100px;
+    width: 245px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 30px rgb(218, 216, 216);
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    aside .carte
+        {
+        padding:3px;
+        height: 150px;
+        width: 300px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        background-color: white;
+        box-shadow: 1px 1px 30px rgb(218, 216, 216);
+        }
+    }
+
+aside img /* un enfant container */
+{   
+    float: left;
+    height: 100%;
+    padding-right: 40px;
+    width: 310px;
+    border-radius: 50px 0 0 50px;
+    object-fit: cover;
+}
+
+@media screen and (min-width:1024px) {
+aside img
+    {
+    padding-right: 10px;
+    width: 90px;
+    height : 100%;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    aside img
+    {
+    padding-right: 10px;
+    width: 125px;
+    height : 100%;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+    }
+    }
+
+aside .note /* un enfant container */
+{  
+    font-size: 15px;
+    text-align: bottom;
+    margin-left: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (min-width:1024px) {
+aside .note
+    {
+        font-size: 9px;
+        margin-left: 0px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    aside .note
+    {
+        font-size: 10px;
+        margin-left: 0px;
+    }
+}
+
+/*en plus */
 
 aside .phrase
 {
@@ -937,6 +1116,124 @@ aside .phrase
         padding-top:5px;
     }
 }
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    aside .phrase
+    {font-size: 13px;
+        font-family: "ralewaymedium";
+        margin-top: 0px;
+        padding-top:14px;
+    }
+    }
+
+.titrepop /* élément parent */
+{
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "ralewaysemibold";
+}
+
+@media screen and (min-width:1024px) {
+.titrepop 
+    {
+        padding:0 0 0 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .titrepop 
+    {
+        padding:0 0 0 0px;
+        margin-bottom: 0px;
+    }
+}
+
+aside h1
+{
+    display: flex;
+    align-items: flex-start;
+}
+
+.titrepop i
+{
+    color:black;
+    font-size: 58px;
+    font-weight: bold;
+    padding-left : 280px;
+}
+
+@media screen and (min-width:1024px) {
+.titrepop i
+    {
+      font-size: 16px;
+      padding-right: 5px; 
+      padding-left: 100px; 
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .titrepop i
+    {
+      font-size: 16px;
+      padding-right: 5px; 
+      padding-left: 100px; 
+    }
+}
+
+    /* même pour tous */
+aside strong
+{
+    font-size: "ralewayregular";
+    font-weight: normal;
+}
+
+.mark
+{
+    font-family: "ralewayextrabold";
+}
+
+aside a
+{
+    text-decoration: none;
+}
+
+/* aside étoiles */
+
+aside .etoiles
+{
+    font-size: 28px;
+    padding-top:60px;
+}
+
+@media screen and (min-width:1024px) {
+aside .etoiles
+    {
+        font-size: 8px;
+        padding-top: 22px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    aside .etoiles
+    {
+        font-size: 10px;
+        padding-top: 40px;
+    }
+}
+
+    aside i
+{
+    color: #F2F2F2;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+aside .bleu
+{
+    color: #0065FC;
+} 
 
 aside H2
 {
@@ -959,153 +1256,22 @@ aside H2
     }
 }
 
-aside .etoiles
-{
-    font-size: 28px;
-    padding-top:60px;
-}
-
-@media screen and (min-width:1024px) {
-aside .etoiles
+@media screen and (min-width:768px) and (max-width:1023px) {
+    aside H2
     {
-        font-size: 8px;
-        padding-top: 22px;
-    }
-}
-
-aside i
-{
-    color: #F2F2F2;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-aside .bleu
-{
-    color: #0065FC;
-} 
-
-aside .note
-{  
-    font-size: 15px;
-    text-align: bottom;
-    margin-left: 5px;
-    color: black;
-    text-decoration: none;
-}
-
-@media screen and (min-width:1024px) {
-aside .note
-    {
-        font-size: 9px;
-        margin-left: 0px;
-    }
-}
-
-.containeraside
-{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    text-decoration: none;
-}
-
-aside a
-{
-    text-decoration: none;
-}
-
-aside .carte
-{
-    padding: 12px 12px 12px 12px;
-    margin: 0px 0 20px 0;
-    border-radius: 55px;
-    height: 350px;
-    width: 840px;
-    background-color: white;
-    box-shadow: 1px 1px 30px rgb(218, 216, 216);
-}
-
-@media screen and (min-width:1024px) {
-aside .carte
-    {
-    padding:3px;
-    height: 100px;
-    width: 245px;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    background-color: white;
-    box-shadow: 1px 1px 30px rgb(218, 216, 216);
-    }
-}
-
-aside img
-{   
-    float: left;
-    height: 100%;
-    padding-right: 40px;
-    width: 310px;
-    border-radius: 50px 0 0 50px;
-    object-fit: cover;
-}
-
-@media screen and (min-width:1024px) {
-aside img
-    {
-    padding-right: 10px;
-    width: 90px;
-    height : 100%;
-    border-radius: 15px 0 0 15px;
-    object-fit: cover;
-    }
-}
-/*en plus */
-aside .phrase
-{
-    font-size: 35px;
-    font-family: "ralewayregular";
-}
-
-@media screen and (min-width:1024px) {
-aside .phrase
-    {font-size: 10px;
-       }
-}
-
-.titrepop
-{
-    padding-left: 50px;
-    display: flex;
-    justify-content: space-between;
-    font-family: "ralewaysemibold";
-}
-
-@media screen and (min-width:1024px) {
-.titrepop
-    {
-        padding:0 0 0 0px;
+        font-size: 16px;
+        padding:10px 20px 0 0;
         margin-bottom: 0px;
+        font-family: "ralewaybold";
     }
-}
-
-.titrepop i
-{
-    color:black;
-    font-size: 58px;
-    font-weight: bold;
-    padding-left : 280px;
-}
-
-@media screen and (min-width:1024px) {
-.titrepop i
+    section H1
     {
-      font-size: 16px;
-      padding-right: 5px; 
-      padding-left: 100px; 
+        font-size: 20px;
     }
 }
+
+
+
 
 .titrenav
 {
@@ -1121,6 +1287,17 @@ section nav
       order : 2; 
     }
 }
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    section nav
+    {
+      margin : 20px 0 0 0px;
+      order : 2; 
+    }
+    }
+
+    @media screen and (max-width:767px) {
+
 
 nav H2
 {
@@ -1277,10 +1454,171 @@ nav h1
 {
     padding-left: 50px;
 }
+}
 
 /* c'est un exemple  attention enlever le surplus lors du media sinon ca ressemble à rien */
 
 /* partie nav media */
+
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    nav H2
+    {
+        display: flex;
+        font-family: "ralewaybold";
+        font-size: 18px;
+        padding-top: 0px;
+        padding-left: 20px;
+        text-decoration: none;
+        justify-content: flex-start;
+        color: black;
+    }
+    
+    .containernav
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+    }
+    
+    nav a
+    {
+        text-decoration: none;
+    }
+    
+    /* nav .carte
+    {
+         width: 860px;
+        height: 500px;
+        margin: 30px 0 30px 0;
+        border-radius: 55px;
+        box-shadow: 1px 1px 30px rgb(218, 216, 216);
+    }  */
+    
+    nav .cartevieuxport
+    {
+        width: 420px;
+        height: 245px;
+        margin: 30px 0 30px 0;
+        border-radius: 15px;
+        box-shadow: 1px 1px 30px rgb(218, 216, 216);
+        }
+    
+        nav .cartepomergues
+    {
+        width: 420px;
+        height: 245px;
+        margin: 30px 0 30px 0;
+        border-radius: 15px;
+        box-shadow: 1px 1px 30px rgb(218, 216, 216);
+    }
+    
+    nav .cartefrioul
+    {
+        width: 420px;
+        height: 245px;
+        margin: 30px 0 30px 0;
+        border-radius: 15px;
+        box-shadow: 1px 1px 30px rgb(218, 216, 216);
+    }
+    
+    nav .cartecalanques
+    {
+        width: 420px;
+        height: 245px;
+        margin: 30px 0 30px 0;
+        border-radius: 15px;
+        box-shadow: 1px 1px 30px rgb(218, 216, 216);
+    }
+    
+    nav .cartenotredame
+    {
+        width: 420px;
+        height: 245px;
+        margin: 30px 0 30px 0;
+        border-radius: 15px;
+        box-shadow: 1px 1px 30px rgb(218, 216, 216);
+    }
+    
+    nav .cartelongchamp
+    {
+        width: 420px;
+        height: 245px;
+        margin: 30px 0 30px 0;
+        border-radius: 15px;
+        box-shadow: 1px 1px 30px rgb(218, 216, 216);
+    }
+    
+    .cartevieuxport img
+    {   
+        width: 100%;
+        height: 80%;    
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    .cartepomergues img
+    {   
+        width: 100%;
+        height: 80%;    
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    .cartefrioul img
+    {   
+        width: 100%;
+        height: 80%;    
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    .cartecalanques img
+    {   
+        width: 100%;
+        height: 80%;    
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    .cartenotredame img
+    {   
+        width: 100%;
+        height: 80%;    
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    .cartelongchamp img
+    {   
+        width: 100%;
+        height: 80%;    
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    nav h1
+    {
+        padding-left: 50px;
+    }
+}
+    
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width:1024px) {
