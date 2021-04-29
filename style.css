@@ -668,7 +668,7 @@ article {
   }
 }*/
 
-article h1
+article h2
 {
   padding: 5px 0 0 20px;
   margin: 15px 0 10px 0;
@@ -724,7 +724,7 @@ article .phrase {
   }
 }*/
 
-article H2 {
+article H3 {
   font-family: "ralewaysemibold";
   font-size: 16px;
   margin: 5px 0 5px 0;
@@ -968,7 +968,7 @@ aside .phrase {
   }
 }*/
 
-aside H1 /* élément parent */ {
+aside H2 /* élément parent */ {
   
  
   font-family: "ralewaysemibold";
@@ -984,7 +984,7 @@ aside H1 /* élément parent */ {
 }*/
 
 
-aside H1 i {
+aside H2 i {
   color: black;
   font-size: 23px;
   font-family: "ralewayextrabold";
@@ -1038,7 +1038,7 @@ aside .bleu {
   color: #0065fc;
 }
 
-aside H2 {
+aside H3 {
   font-family: "ralewaybold";
   font-size: 17px;
   margin-bottom: 5px;
@@ -1067,7 +1067,7 @@ aside H2 {
 
 
 
-nav H2 {
+nav H3 {
   display: flex;
   font-family: "ralewaysemibold";
   font-size: 15px;
@@ -1209,7 +1209,7 @@ nav .cartelongchamp {
   overflow: hidden;
 }
 */
-nav h1 
+nav h2 
   {
     padding: 5px 0 0 20px;
     margin: 10px 0 10px 0;
