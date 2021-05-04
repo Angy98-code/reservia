@@ -42,18 +42,18 @@
 /* enlever les font family non utiles*/
 
 body {
+  font-family: "ralewayregular", "ralewayextrabold", "ralewaysemibold",
+    "ralewaymedium", "ralewaybold", arial, sans-serif;
+  color: black;
+  margin: 0;
   margin: 0;
   max-width: 1024px;
+  box-shadow: 1px 1px 30px rgb(218, 216, 216);
 }
 
-.blocpage {
-  font-family: "ralewayregular", "ralewayextrabold", "ralewaymedium",
-    "ralewaybold", arial, sans-serif;
-  font-size: 40px;
-  padding-top: 80px;
-  color: black;
-  height: auto;
-  margin: 0;
+h1,
+h2 {
+  font-family: "ralewaymedium";
 }
 
 /* 1ère partie header */
@@ -154,19 +154,9 @@ header nav a:hover {
 
 .entetedeux H1 {
   font-size: 23px;
-  font-family: "ralewaysemibold";
   margin-bottom: 0px;
   padding-left: 20px;
-}
-
-h2 {
-  font-size: 16px;
-  font-family: "ralewayregular";
-}
-
-h3 {
-  font-size: 12px;
-  font-family: "ralewayregular";
+  padding-right: 10px;
 }
 
 .naturephrase {
@@ -248,6 +238,7 @@ h3 {
   outline: none;
   cursor: grab;
   position: relative;
+  justify-content: center;
 }
 
 .buttoninfo i {
@@ -264,7 +255,7 @@ h3 {
   box-shadow: 0 9px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 599px) {
   span.text {
     display: none;
   }
@@ -272,12 +263,16 @@ h3 {
     display: inline-block;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 600px) {
   span.text {
     display: inline-block;
   }
   span.icon {
     display: none;
+  }
+  .buttoninfo {
+    width: 110px;
+    border-radius: 0 15px 15px 0;
   }
 }
 
@@ -292,7 +287,7 @@ h3 {
 .titrefiltre {
   display: flex;
   font-size: 18px;
-  font-family: "ralewaybold";
+  font-family: "ralewaymedium";
   padding-left: 20px;
 }
 
@@ -388,16 +383,15 @@ article {
 }
 
 article h2 {
-  padding: 5px 0 0 20px;
+  padding: 5px 0 5px 20px;
   margin: 15px 0 10px 0;
   font-size: 22px;
-  font-family: "ralewaysemibold";
 }
 
 .afficher {
   font-size: 17px;
   align-items: flex-start;
-  font-family: "ralewaybold";
+  font-family: "ralewaysemibold";
   text-decoration: none;
   color: black;
   padding: 15px 0 0 20px;
@@ -415,9 +409,9 @@ article .phrase {
 }
 
 article H3 {
-  font-family: "ralewaysemibold";
   font-size: 16px;
   margin: 5px 0 5px 0;
+  font-family: "ralewaymedium";
 }
 
 article .etoiles {
@@ -475,6 +469,7 @@ article img {
 }
 
 /* aside */
+
 aside {
   background-color: #f2f2f2;
   padding: 15px 0 30px 0;
@@ -525,7 +520,6 @@ aside .phrase {
 }
 
 aside H2 /* élément parent */ {
-  font-family: "ralewaysemibold";
   padding-left: 20px;
   font-size: 22px;
 }
@@ -569,24 +563,24 @@ aside .bleu {
 }
 
 aside H3 {
-  font-family: "ralewaybold";
   font-size: 17px;
   margin-bottom: 5px;
-
   text-decoration: none;
+  padding-right: 10px;
+  font-family: "ralewaymedium";
 }
 
 /* nav */
 
 nav H3 {
   display: flex;
-  font-family: "ralewaysemibold";
   font-size: 15px;
   padding-top: 5px;
   padding-left: 15px;
   text-decoration: none;
   justify-content: flex-start;
   color: black;
+  font-family: "ralewaymedium";
 }
 
 .containernav {
@@ -616,7 +610,6 @@ nav img {
   height: 70%;
   border-radius: 16px 16px 0 0;
   object-fit: cover;
-  overflow: hidden;
   filter: brightness(1);
 }
 
@@ -624,7 +617,6 @@ nav h2 {
   padding: 5px 0 0 20px;
   margin: 10px 0 10px 0;
   font-size: 22px;
-  font-family: "ralewaysemibold";
 }
 /*footer ok */
 footer {
@@ -665,15 +657,20 @@ footer a {
   flex-direction: column;
 }
 footer h3 {
-  font-family: "ralewaysemibold";
   font-size: 19px;
   margin-bottom: 5px;
+  font-family: "ralewaymedium";
 }
 
 @media screen and (min-width: 1024px) {
   body {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  h1,
+  h2 {
+    font-family: "ralewaymedium";
   }
 
   /*#blocpage
@@ -721,9 +718,9 @@ footer h3 {
     width: 90px;
     height: 35px;
     color: #0065fc;
-    margin-top: -14px;
     margin-right: 28px;
-    padding-top: 34px;
+    margin-top: -6px;
+    padding-top: 22px;
     padding-left: 25px;
     padding-right: 15px;
     border-top: 3px solid #0065fc;
@@ -751,6 +748,7 @@ footer h3 {
     font-weight: normal;
     padding-right: 0px;
     order: 1;
+    font-weight: bold;
     margin-right: 60px;
     font-size: 11px;
   }
@@ -772,6 +770,7 @@ footer h3 {
     font-size: 15px;
     font-family: "ralewaymedium";
     padding-left: 0px;
+    /*padding-left: 20px;*/
   }
   .entetedeux H2 {
     font-size: 12px;
@@ -830,7 +829,7 @@ footer h3 {
     height: 37px;
     margin-left: 0px;
     padding: 0 13px 0 13px;
-    font-family: "ralewaybold";
+    font-family: "ralewayextrabold";
     font-size: 13px;
     outline: none;
     cursor: grab;
@@ -851,8 +850,8 @@ footer h3 {
   .titrefiltre {
     display: flex;
     font-size: 13px;
-    font-family: "ralewaysemibold";
     padding-left: 0px;
+    font-family: "ralewaymedium";
   }
 
   .filtrecontainer {
@@ -954,15 +953,13 @@ footer h3 {
     order: 1;
     margin: 0px 30px 0 0;
   }
-  .titrearticle {
-    padding: 15px 0 6px 30px;
-    font-family: "ralewaysemibold";
-  }
+
   .afficher {
     font-size: 13px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px 0 11px 30px;
+    font-weight: bold;
   }
   article strong {
     font-family: "ralewaymedium";
@@ -974,14 +971,13 @@ footer h3 {
   }
   article H2 {
     font-size: 15px;
-    font-family: "ralewaysemibold";
     padding: 13px 0 6px 30px;
   }
 
   article H3 {
     font-size: 11px;
-    font-family: "ralewaysemibold";
     padding: 0;
+    font-family: "ralewaymedium";
   }
   article .etoiles {
     font-size: 8px;
@@ -1059,8 +1055,9 @@ footer h3 {
 
   aside H3 {
     font-size: 11px;
-    font-family: "ralewaysemibold";
+    font-family: "ralewaymedium";
   }
+
   aside .phrase {
     font-size: 10px;
     font-family: "ralewaymedium";
@@ -1070,7 +1067,6 @@ footer h3 {
 
   aside H2 i {
     font-size: 16px;
-    font-weight: bold;
     padding-left: 90px;
   }
 
@@ -1083,7 +1079,6 @@ footer h3 {
     font-size: 15px;
     padding: 0px 0px 10px 0;
     margin-bottom: 0px;
-    font-family: "ralewaysemibold";
   }
 
   section nav {
@@ -1118,16 +1113,15 @@ footer h3 {
 
   section nav H2 {
     color: black;
-    font-family: "ralewaysemibold";
     font-size: 15px;
     padding-left: 5px;
   }
 
   section nav H3 {
     color: black;
-    font-family: "ralewaymedium";
     font-size: 11px;
     padding: 2px 0 0 15px;
+    font-family: "ralewaymedium";
   }
 
   nav .pomergues {
@@ -1208,7 +1202,6 @@ footer h3 {
     align-items: flex-start;
     padding-bottom: 0px;
     object-fit: cover;
-    overflow: hidden;
   }
 
   .calanques img {
@@ -1220,7 +1213,6 @@ footer h3 {
     padding-bottom: 0px;
     filter: brightness(1.2);
     object-fit: cover;
-    overflow: hidden;
   }
 
   .longchamp img {
@@ -1231,7 +1223,6 @@ footer h3 {
     align-items: flex-start;
     padding-bottom: 0px;
     object-fit: cover;
-    overflow: hidden;
     filter: brightness(1.05);
   }
 
@@ -1243,7 +1234,6 @@ footer h3 {
     align-items: flex-start;
     padding-bottom: 0px;
     object-fit: cover;
-    overflow: hidden;
   }
 
   .frioul img {
@@ -1254,7 +1244,6 @@ footer h3 {
     align-items: flex-start;
     padding-bottom: 0px;
     object-fit: cover;
-    overflow: hidden;
   }
 
   .notredame img {
@@ -1265,14 +1254,13 @@ footer h3 {
     align-items: flex-start;
     padding-bottom: 0px;
     object-fit: cover;
-    overflow: hidden;
   }
   footer {
     display: grid;
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr 60px;
     background-color: #f2f2f2;
-    margin: 40px 0 0px 0;
+    margin: 45px 0 0px 0;
   }
 
   footer h3 {
