@@ -180,12 +180,6 @@ header nav a:hover {
   border-radius: 16px 0px 0px 16px;
 }
 
-.zoom {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
 @media screen and (max-width: 360px) {
   .containerrecherche {
     width: 260px;
@@ -351,7 +345,7 @@ header nav a:hover {
 .texteinfo {
   display: flex;
   align-items: center;
-  padding: 30px 0 30px 20px;
+  padding: 20px 0 30px 20px;
 }
 .containerinfo {
   width: 25px;
