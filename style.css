@@ -99,9 +99,9 @@ header nav {
 
 .heb {
   text-decoration: none;
-  color: black;
-  font-family: "ralewayregular";
-  border-bottom: 3px #f2f2f2 solid;
+  color: #0065fc;
+  font-family: "ralewaymedium";
+  border-bottom: 3px solid #0065fc;
   padding-bottom: 15px;
   width: 50%;
   text-align: center;
@@ -177,7 +177,7 @@ header nav a:hover {
   height: 50px;
   width: 310px;
   border: solid 2px #f2f2f2;
-  border-radius: 16px 0px 0px 16px;
+  border-radius: 18px 0px 0px 18px;
 }
 
 @media screen and (max-width: 360px) {
@@ -193,7 +193,10 @@ header nav a:hover {
 .infoinconn {
   background-color: #f2f2f2;
   width: 50px;
+  height: 51px;
+  margin: 0px 0 0 0;
   position: relative;
+  left: -2px;
   border-radius: 16px 0 0 16px;
 }
 
@@ -306,10 +309,10 @@ header nav a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  height: 47px;
+  height: 49px;
   font-family: "ralewaybold";
   font-size: 17px;
-  border: 3px #d1d1d1 solid;
+  border: 2px #d1d1d1 solid;
   border-radius: 50px;
   padding: 0 16px 0 60px;
   margin-left: 12px;
@@ -372,12 +375,12 @@ header nav a:hover {
 /* article */
 article {
   background-color: white;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 20px 20px 20px;
   margin: 0;
 }
 
 article h2 {
-  padding: 5px 0 5px 20px;
+  padding: 5px 0 5px 0px;
   margin: 15px 0 10px 0;
   font-size: 22px;
 }
@@ -388,7 +391,7 @@ article h2 {
   font-family: "ralewaysemibold";
   text-decoration: none;
   color: black;
-  padding: 15px 0 0 20px;
+  padding: 15px 0 0 0px;
 }
 
 article strong {
@@ -436,9 +439,9 @@ article .note {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
   column-gap: 10px;
   row-gap: 12px;
+  width: 100%;
 }
 
 article a {
@@ -446,13 +449,22 @@ article a {
 }
 
 article .carte {
-  width: 325px;
+  width: 100%;
   height: 195px;
   background-color: white;
   padding: 5px 5px 0px 5px;
   margin: 0;
   border-radius: 16px;
   box-shadow: 1px 1px 30px rgb(233, 231, 231);
+}
+
+@media screen and (min-width: 660px) and (max-width: 1023px) {
+  article .carte {
+    width: calc(50% - 15px);
+  }
+  .containerarticle {
+    row-gap: 20px;
+  }
 }
 
 article img {
@@ -466,7 +478,7 @@ article img {
 
 aside {
   background-color: #f2f2f2;
-  padding: 15px 0 30px 0;
+  padding: 15px 20px 30px 20px;
 }
 
 .containeraside /* parent principal */ {
@@ -474,7 +486,8 @@ aside {
   flex-wrap: wrap;
   column-gap: 10px;
   height: auto;
-  justify-content: center;
+  width: 100%;
+  /*justify-content: center;*/
 }
 
 aside .carte /* enfant de container et parent img et note */ {
@@ -482,10 +495,16 @@ aside .carte /* enfant de container et parent img et note */ {
   margin: 5px 0 5px 0;
   border-radius: 16px;
   height: 135px;
-  width: 330px;
+  width: 100%;
   background-color: white;
   box-shadow: 1px 1px 30px rgb(218, 216, 216);
 }
+
+/*@media screen and (min-width: 768px) {
+  aside .carte {
+    width: calc(50% - 10px);
+  }
+}*/
 
 aside img /* un enfant container */ {
   float: left;
@@ -496,12 +515,35 @@ aside img /* un enfant container */ {
   object-fit: cover;
 }
 
+@media screen and (min-width: 660px) and (max-width: 1023px) {
+  aside .carte {
+    width: calc(50% - 10px);
+  }
+  .containeraside {
+    row-gap: 10px;
+  }
+  aside img {
+    width: 40%;
+  }
+}
+
 aside .note /* un enfant container */ {
   display: flex;
   flex-direction: column;
   padding: 0px 0 0 20px;
   color: black;
   text-decoration: none;
+}
+
+@media screen and (max-width: 359px) {
+  aside .note {
+    padding: 0 0 0 10px;
+  }
+  aside,
+  article {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 /*en plus */
@@ -514,15 +556,18 @@ aside .phrase {
 }
 
 aside H2 /* élément parent */ {
-  padding-left: 20px;
   font-size: 22px;
 }
 
-aside H2 i {
+.popi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popi i {
+  font-size: 20px;
   color: black;
-  font-size: 23px;
-  font-family: "ralewayextrabold";
-  padding-left: 110px;
 }
 
 /* même pour tous */
@@ -560,12 +605,14 @@ aside H3 {
   font-size: 17px;
   margin-bottom: 5px;
   text-decoration: none;
-  padding-right: 10px;
   font-family: "ralewaymedium";
 }
 
 /* nav */
 
+section nav {
+  padding: 0 20px 0 20px;
+}
 nav H3 {
   display: flex;
   font-size: 15px;
@@ -584,6 +631,7 @@ nav H3 {
   justify-content: center;
   column-gap: 10px;
   padding-top: 2px;
+  width: 100%;
 }
 
 nav a {
@@ -593,12 +641,22 @@ nav a {
 nav .carte {
   position: relative;
   margin-top: 20px;
-  width: 340px;
+  width: 100%;
   height: 190px;
   background-color: white;
   border-radius: 16px;
   box-shadow: 1px 1px 30px rgb(218, 216, 216);
 }
+
+@media screen and (min-width: 660px) and (max-width: 1023px) {
+  section nav .carte {
+    width: calc(50% - 10px);
+  }
+  .containernav {
+    row-gap: 5px;
+  }
+}
+
 nav img {
   width: 100%;
   height: 70%;
@@ -608,7 +666,7 @@ nav img {
 }
 
 nav h2 {
-  padding: 5px 0 0 20px;
+  padding: 5px 0 0 0px;
   margin: 10px 0 10px 0;
   font-size: 22px;
 }
@@ -620,12 +678,12 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 60px;
   background-color: #f2f2f2;
   padding: 25px 0 60px 25px;
-  margin-top: 45px;
+  margin-top: 50px;
   row-gap: 25px;
 }
 
 .tabfooter {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 footer a {
@@ -793,6 +851,7 @@ footer h3 {
   .infoinconn {
     background-color: #f2f2f2;
     width: 35px;
+    height: 35px;
     position: relative;
     border-radius: 12px 0 0 12px;
   }
@@ -820,7 +879,8 @@ footer h3 {
     align-items: center;
     border: 2px solid;
     border-radius: 0 10px 10px 0;
-    height: 37px;
+    top: -2px;
+    height: 40px;
     margin-left: 0px;
     padding: 0 13px 0 13px;
     font-family: "ralewayextrabold";
@@ -865,6 +925,7 @@ footer h3 {
     width: 32px;
     height: 32px;
     border: #deebff solid 2px;
+    top: 1px;
     margin-left: 9px;
     position: absolute;
     z-index: 1;
@@ -986,11 +1047,10 @@ footer h3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
+    justify-content: space-evenly;
     /*grid-template-rows: 80px 80px;*/
     /* row-gap: 20px;
       column-gap: 20px;*/
-    padding: 0px 30px 2px 30px;
   }
   article .carte {
     display: flex;
@@ -1007,6 +1067,7 @@ footer h3 {
     width: 100%;
     height: 60%;
   }
+
   aside {
     padding: 15px 20px 4px 20px;
     order: 2;
@@ -1059,9 +1120,15 @@ footer h3 {
     padding-top: 0px;
   }
 
-  aside H2 i {
+  .popi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .popi i {
     font-size: 16px;
-    padding-left: 90px;
+    color: black;
   }
 
   aside .etoiles {
