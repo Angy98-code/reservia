@@ -229,7 +229,7 @@ header nav a:hover {
   background-color: #0065fc;
   color: white;
   align-items: center;
-  border: 2px solid #0065fc;
+  border: 2px solid #0064fc;
   border-radius: 16px 16px 16px 16px;
   height: 53px;
   width: 51px;
@@ -418,8 +418,11 @@ article H3 {
 
 article .etoiles {
   font-size: 12px;
+  display: flex;
   font-weight: bold;
   margin: 0;
+  position: absolute;
+  bottom: 4%;
 }
 
 article i {
@@ -461,6 +464,7 @@ article .carte {
   margin: 0;
   border-radius: 16px;
   box-shadow: 1px 1px 30px rgb(233, 231, 231);
+  position: relative;
 }
 
 @media screen and (min-width: 660px) and (max-width: 1024px) {
@@ -503,6 +507,7 @@ aside .carte /* enfant de container et parent img et note */ {
   width: 100%;
   background-color: white;
   box-shadow: 1px 1px 30px rgb(218, 216, 216);
+  position: relative;
 }
 /*
 @media screen and (min-width: 768px) {
@@ -593,9 +598,12 @@ aside a {
 
 aside .etoiles {
   font-size: 11px;
+  display: flex;
   font-weight: bold;
   padding-top: 25px;
   margin: 0;
+  position: absolute;
+  bottom: 10%;
 }
 
 aside i {
@@ -820,8 +828,8 @@ footer h3 {
     height: 35px;
     color: #0065fc;
     margin-right: 28px;
-    margin-top: -24px;
-    padding-top: 38px;
+    margin-top: -25px;
+    padding-top: 41px;
     padding-left: 36px;
     padding-right: 40px;
     border-top: 3px solid #0065fc;
@@ -836,7 +844,7 @@ footer h3 {
   }
 
   #logo img {
-    width: 90px;
+    width: 100px;
     font-family: "ralewayregular";
     font-weight: bold;
     margin-left: 50px;
@@ -974,7 +982,7 @@ footer h3 {
     border-radius: 100%;
     width: 43px;
     height: 43px;
-    border: #deebff solid 2px;
+    border: #0065fc solid 2px;
     margin-left: 9px;
     position: absolute;
     z-index: 1;
@@ -1150,6 +1158,7 @@ footer h3 {
     padding: 4px 0 4px 4px;
     background-color: white;
     box-shadow: 1px 1px 30px rgb(218, 216, 216);
+    position: relative;
   }
   aside img {
     padding: 0;
@@ -1167,6 +1176,7 @@ footer h3 {
   aside H3 {
     font-size: 15px;
     font-family: "ralewaymedium";
+    padding-right: 5px;
   }
 
   aside .phrase {
@@ -1188,17 +1198,21 @@ footer h3 {
   }
 
   aside .etoiles {
+    display: block;
     font-size: 10px;
     padding: 0 0 5px 0;
     position: relative;
-    bottom: 20px;
+    bottom: 10%;
+    position: absolute;
   }
   .eau .etoiles {
     padding-top: 46px;
+    position: absolute;
   }
 
   .bleublanc .etoiles {
     padding-top: 62px;
+    position: absolute;
   }
 
   .matin .etoiles {
@@ -1213,7 +1227,7 @@ footer h3 {
 
   section nav {
     margin: 40px 0 0 0px;
-    padding: 0;
+    padding: 0 0 10px 0;
     order: 3;
     grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
   }
@@ -1389,12 +1403,10 @@ footer h3 {
     object-position: 0 -2px;
   }
   footer {
-    display: flex;
+    display: grid;
     background-color: #f2f2f2;
     flex-direction: row;
-    justify-content: flex-start;
-    padding: 25px 0 55px 45px;
-    column-gap: 211px;
+    padding: 25px 0 55px 50px;
   }
 
   footer h3 {
@@ -1407,9 +1419,11 @@ footer h3 {
   footer a {
     font-family: "ralewaymedium";
   }
+}
 
-  .assistance {
-    padding-left: 60px;
+@media screen and (min-width: 320px) and (max-width: 659px) {
+  .notredame img {
+    object-position: 0 -5px;
   }
 }
 
@@ -1428,10 +1442,5 @@ footer h3 {
   }
   .amina img {
     object-position: 0 -360px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 659px) {
-  .notredame img {
-    object-position: 0 -5px;
   }
 }
