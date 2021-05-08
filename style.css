@@ -303,7 +303,7 @@ header nav a:hover {
   border-radius: 100%;
   width: 49px;
   height: 49px;
-  border: #deebff solid 2px;
+  border: transparent solid 2px;
   background-color: #deebff;
   margin-left: 9px;
   position: absolute;
@@ -932,7 +932,7 @@ footer h3 {
     background-color: #0065fc;
     color: white;
     align-items: center;
-    border: 2px solid;
+    border: 2px solid #0064fc;
     border-radius: 0 16px 16px 0;
     top: -2px;
     height: 53px;
@@ -982,7 +982,7 @@ footer h3 {
     border-radius: 100%;
     width: 43px;
     height: 43px;
-    border: #0065fc solid 2px;
+    border: transparent solid 2px;
     margin-left: 9px;
     position: absolute;
     z-index: 1;
@@ -1407,6 +1407,8 @@ footer h3 {
     background-color: #f2f2f2;
     flex-direction: row;
     padding: 25px 0 55px 50px;
+    column-gap: normal;
+    grid-template-rows: auto;
   }
 
   footer h3 {
