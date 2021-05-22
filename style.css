@@ -485,7 +485,6 @@ article img {
 }
 
 /* aside */
-
 aside {
   background-color: #f2f2f2;
   padding: 15px 20px 30px 20px;
@@ -552,7 +551,6 @@ aside .note /* un enfant container */ {
 }
 
 /*en plus */
-
 aside .phrase {
   font-size: 15px;
   font-family: "ralewayregular";
@@ -590,7 +588,6 @@ aside a {
 }
 
 /* aside étoiles */
-
 aside .etoiles {
   font-size: 11px;
   display: flex;
